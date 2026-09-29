@@ -22,3 +22,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Keep changes focused and avoid unrelated refactors.
 - Validate the affected behavior with the narrowest relevant lint, typecheck, build, or test command available.
 - For Next.js work, read the relevant version-specific guidance in `node_modules/next/dist/docs/` before changing framework APIs or conventions.
+
+## Commit Guidelines
+
+- Use commit messages in the format `<type>(<scope>): <short description>`, where `<type>` is one of `feat`, `fix`, `refactor`, `test`, `docs`, `chore`, or `build`.
+- One commit must contain one understandable logical change.
