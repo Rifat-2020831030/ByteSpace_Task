@@ -26,6 +26,7 @@ export const ASSETS = {
     menu: "/assets/icon-menu.svg",
     logo: "/assets/logo-icon.svg",
     star: "/assets/icon-star.svg",
+    check: "/assets/icon-check.svg",
   },
   masks: {
     rect1: "/assets/mask-rect-1.png",
@@ -53,5 +54,12 @@ export const ASSETS = {
     course4: "/assets/course-card-4.png",
     course5: "/assets/course-card-5.png",
     course6: "/assets/course-card-6.png",
+  },
+  growth: {
+    student1: "/assets/growth-student-1.png",
+    shape1: "/assets/growth-shape-1.png",
+    student2: "/assets/growth-student-2.png",
+    shape2: "/assets/growth-shape-2.png",
+    bg: "/assets/growth-bg.svg",
   },
 } as const;
