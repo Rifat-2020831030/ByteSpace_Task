@@ -8,10 +8,10 @@ export function ProfessionalGrowth() {
         {/* Left Side: Text and Stats */}
         <div className="flex flex-col gap-10 lg:w-[574px] shrink-0">
           <div className="flex flex-col gap-6">
-            <h2 className="font-['Poppins:SemiBold'] text-[32px] md:text-[44px] leading-[1.2] text-[#242528] tracking-[-0.44px] max-w-[577px]">
+            <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-brand-gray-950 tracking-[-0.44px] max-w-[577px]">
               Your Path to Professional Growth Starts Here!
             </h2>
-            <p className="font-['Satoshi:Regular'] text-[16px] md:text-[18px] leading-[1.6] text-[#4b4c53] max-w-[477px]">
+            <p className="font-body font-normal text-[16px] md:text-[18px] leading-[1.6] text-brand-text-secondary max-w-[477px]">
               Explore our curated selection of courses tailored to enhance your
               capabilities and accelerate your career journey. Whether you are
               looking to sharpen specific skills, gain industry expertise, or
@@ -22,26 +22,26 @@ export function ProfessionalGrowth() {
 
           <div className="flex flex-wrap gap-8 md:gap-[56px] items-end mt-4">
             <div className="flex flex-col">
-              <span className="font-['Poppins:SemiBold'] text-[48px] text-[#003be2] leading-[1.2] tracking-[-0.48px]">
+              <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
                 12K
               </span>
-              <span className="font-['Satoshi:Regular'] text-[16px] text-[#4b4c53] leading-[1.2] mt-1">
+              <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
                 Students
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-['Poppins:SemiBold'] text-[48px] text-[#003be2] leading-[1.2] tracking-[-0.48px]">
+              <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
                 70+
               </span>
-              <span className="font-['Satoshi:Regular'] text-[16px] text-[#4b4c53] leading-[1.2] mt-1">
+              <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
                 Courses
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-['Poppins:SemiBold'] text-[48px] text-[#003be2] leading-[1.2] tracking-[-0.48px]">
+              <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
                 16
               </span>
-              <span className="font-['Satoshi:Regular'] text-[16px] text-[#4b4c53] leading-[1.2] mt-1">
+              <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
                 Creators
               </span>
             </div>
@@ -63,7 +63,7 @@ export function ProfessionalGrowth() {
 
           {/* Floating Course Card - BEHIND the student (z-10) */}
           <div className="absolute -left-4 md:-left-[50px] top-[20px] md:top-[120px] scale-[0.6] md:scale-[0.75] origin-top-left z-10 pointer-events-none opacity-80 md:opacity-100">
-            <div className="w-[373px] bg-white rounded-[24px] border border-[#ced0d3] p-4 flex flex-col shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
+            <div className="w-[373px] bg-white rounded-[24px] border border-brand-gray-200 p-4 flex flex-col shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
               <div className="relative w-full aspect-[341/195] rounded-[12px] overflow-hidden bg-[#443131]">
                 <Image
                   src={ASSETS.courses.course1}
@@ -72,7 +72,7 @@ export function ProfessionalGrowth() {
                   className="object-cover"
                 />
                 <div className="absolute inset-x-0 bottom-3 px-3 flex gap-2">
-                  <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[12px] py-[6px] rounded-[24px] text-[12px] font-['Satoshi:Medium'] text-[#4f4f4f]">
+                  <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[12px] py-[6px] rounded-[24px] text-[12px] font-body font-medium text-brand-text-tertiary">
                     17 Lessons
                   </div>
                 </div>
@@ -80,27 +80,27 @@ export function ProfessionalGrowth() {
               <div className="flex flex-col gap-4 mt-4">
                 <div className="flex justify-between items-start">
                   <div className="flex flex-col gap-[4px]">
-                    <h3 className="font-['Poppins:SemiBold'] text-[20px] text-black leading-[1.2]">
+                    <h3 className="font-heading font-semibold text-[20px] text-black leading-[1.2]">
                       Learn Figma from Basic
                     </h3>
-                    <p className="font-['Satoshi:Regular'] text-[12px] text-[#4f4f4f]">
+                    <p className="font-body font-normal text-[12px] text-brand-text-tertiary">
                       by{" "}
-                      <span className="text-[#003be2]">purepearl studio</span>
+                      <span className="text-brand-blue">purepearl studio</span>
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-[12px]">
-                  <div className="bg-[#f5f5f6] flex items-center gap-[4px] px-[12px] py-[6px] rounded-[24px]">
-                    <span className="font-['Satoshi:Medium'] text-[12px] text-[#4b4c53]">
+                  <div className="bg-brand-gray-50 flex items-center gap-[4px] px-[12px] py-[6px] rounded-[24px]">
+                    <span className="font-body font-medium text-[12px] text-brand-text-secondary">
                       Beginner
                     </span>
                   </div>
                 </div>
                 <div className="flex items-end mt-auto h-[24px]">
-                  <span className="font-['Poppins:SemiBold'] text-[20px] text-[#003be2] leading-[1.2]">
+                  <span className="font-heading font-semibold text-[20px] text-brand-blue leading-[1.2]">
                     $25
                   </span>
-                  <span className="font-['Satoshi:Regular'] text-[12px] text-[#4f4f4f] pl-[4px]">
+                  <span className="font-body font-normal text-[12px] text-brand-text-tertiary pl-[4px]">
                     /lifetime
                   </span>
                 </div>
@@ -110,14 +110,14 @@ export function ProfessionalGrowth() {
 
           {/* Floating Learning Progress Card - Above the student (z-30) */}
           <div className="absolute -right-4 md:-right-4 top-[38%] bg-white/90 backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col gap-[8px] z-30">
-            <p className="font-['Satoshi:Medium'] text-[14px] text-[#242528] leading-[1.6]">
+            <p className="font-body font-medium text-[14px] text-brand-gray-950 leading-[1.6]">
               Learning Progress
             </p>
-            <p className="font-['Poppins:SemiBold'] text-[48px] text-[#242528] leading-[1.2] tracking-[-0.48px]">
+            <p className="font-heading font-semibold text-[48px] text-brand-gray-950 leading-[1.2] tracking-[-0.48px]">
               55%
             </p>
             <div className="w-[200px] h-[8px] bg-[#f6f6f6] rounded-[24px] overflow-hidden">
-              <div className="h-full bg-[#d4fb20] w-[55%] rounded-[24px]"></div>
+              <div className="h-full bg-brand-lime w-[55%] rounded-[24px]"></div>
             </div>
           </div>
 
@@ -130,7 +130,7 @@ export function ProfessionalGrowth() {
               className="object-contain pointer-events-none"
             />
             <div
-              className="absolute inset-0 bg-[#d4fb20] mix-blend-hard-light pointer-events-none"
+              className="absolute inset-0 bg-brand-lime mix-blend-hard-light pointer-events-none"
               style={{
                 WebkitMaskImage: `url(${ASSETS.growth.shape1})`,
                 WebkitMaskSize: "contain",

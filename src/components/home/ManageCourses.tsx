@@ -18,45 +18,45 @@ export function ManageCourses() {
           </div>
 
           {/* Floating Card: Total Revenue (Left edge) */}
-          <div className="absolute left-0 top-[20px] md:top-[44px] bg-[#003be2] backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-lg flex flex-col gap-[8px] z-30 w-[200px] md:w-fit">
-            <div className="flex flex-col text-[#f5f5f6]">
-              <span className="font-['Satoshi:Medium'] text-[16px] leading-[1.2]">
+          <div className="absolute left-0 top-[20px] md:top-[44px] bg-brand-blue backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-lg flex flex-col gap-[8px] z-30 w-[200px] md:w-fit">
+            <div className="flex flex-col text-brand-gray-50">
+              <span className="font-body font-medium text-[16px] leading-[1.2]">
                 Total Revenue
               </span>
-              <span className="font-['Satoshi:Regular'] text-[10px] leading-[1.2]">
+              <span className="font-body font-normal text-[10px] leading-[1.2]">
                 July 1-28
               </span>
             </div>
             <div className="flex items-center justify-between gap-[16px]">
-              <span className="font-['Poppins:SemiBold'] text-[24px] text-[#f5f5f6] leading-[32px] tracking-[-0.24px]">
+              <span className="font-heading font-semibold text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
                 $120.29
               </span>
-              <div className="bg-[#cbfc01] px-[8px] py-[2px] rounded-[24px]">
-                <span className="font-['Satoshi:Medium'] text-[10px] text-[#242528]">
+              <div className="bg-brand-lime-alt px-[8px] py-[2px] rounded-[24px]">
+                <span className="font-body font-medium text-[10px] text-brand-gray-950">
                   +12$
                 </span>
               </div>
             </div>
             <div className="w-full md:w-[200px] h-[8px] bg-white rounded-[24px] overflow-hidden mt-2 relative">
-              <div className="absolute left-0 top-0 h-full bg-[#d4fb20] w-[55%] rounded-[24px]"></div>
+              <div className="absolute left-0 top-0 h-full bg-brand-lime w-[55%] rounded-[24px]"></div>
             </div>
           </div>
 
           {/* Floating Card: Year to Date (Left edge) */}
-          <div className="absolute left-0 top-[150px] md:top-[194px] bg-[#003be2] backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-lg flex flex-col gap-[8px] z-30 w-[134px]">
-            <div className="flex flex-col text-[#f5f5f6]">
-              <span className="font-['Satoshi:Medium'] text-[16px] leading-[1.2]">
+          <div className="absolute left-0 top-[150px] md:top-[194px] bg-brand-blue backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-lg flex flex-col gap-[8px] z-30 w-[134px]">
+            <div className="flex flex-col text-brand-gray-50">
+              <span className="font-body font-medium text-[16px] leading-[1.2]">
                 Year to Date
               </span>
-              <span className="font-['Satoshi:Regular'] text-[10px] leading-[1.2]">
+              <span className="font-body font-normal text-[10px] leading-[1.2]">
                 2023
               </span>
             </div>
-            <span className="font-['Poppins:SemiBold'] text-[24px] text-[#f5f5f6] leading-[32px] tracking-[-0.24px]">
+            <span className="font-heading font-semibold text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
               $1,200.38
             </span>
-            <div className="bg-[#cbfc01] px-[8px] py-[2px] rounded-[24px] w-fit">
-              <span className="font-['Satoshi:Medium'] text-[10px] text-[#242528]">
+            <div className="bg-brand-lime-alt px-[8px] py-[2px] rounded-[24px] w-fit">
+              <span className="font-body font-medium text-[10px] text-brand-gray-950">
                 +12$
               </span>
             </div>
@@ -64,15 +64,15 @@ export function ManageCourses() {
 
           {/* Floating Card: Happy Students (Bottom right) */}
           <div className="absolute right-0 md:left-[283px] bottom-0 md:top-[413px] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[258px]">
-            <span className="font-['Satoshi:Medium'] text-[16px] text-[#242528] leading-[24px]">
+            <span className="font-body font-medium text-[16px] text-brand-gray-950 leading-[24px]">
               Happy Students
             </span>
 
             <div className="flex items-center gap-[4px] -mt-1 mb-1">
-              <span className="font-['Satoshi:Bold'] text-[#242528] text-[10px] leading-[1.5]">
+              <span className="font-body font-bold text-brand-gray-950 text-[10px] leading-[1.5]">
                 4.5
               </span>
-              <span className="font-['Satoshi:Regular'] text-[#82868e] text-[10px] leading-[1.5]">
+              <span className="font-body font-normal text-brand-gray-400 text-[10px] leading-[1.5]">
                 (240)
               </span>
               <div className="relative w-[16px] h-[16px]">
@@ -101,8 +101,8 @@ export function ManageCourses() {
                   <Image src={avatar} fill className="object-cover" alt="" />
                 </div>
               ))}
-              <div className="relative w-[43px] h-[43px] rounded-full border-[1.5px] border-white bg-[#d4fb20] flex items-center justify-center shrink-0 z-10">
-                <span className="font-['Satoshi:Bold'] text-[12px] text-[#242528]">
+              <div className="relative w-[43px] h-[43px] rounded-full border-[1.5px] border-white bg-brand-lime flex items-center justify-center shrink-0 z-10">
+                <span className="font-body font-bold text-[12px] text-brand-gray-950">
                   2K+
                 </span>
               </div>
@@ -118,7 +118,7 @@ export function ManageCourses() {
               className="object-contain pointer-events-none"
             />
             <div
-              className="absolute inset-0 bg-[#d4fb20] mix-blend-hard-light pointer-events-none"
+              className="absolute inset-0 bg-brand-lime mix-blend-hard-light pointer-events-none"
               style={{
                 WebkitMaskImage: `url(${ASSETS.growth.student2})`,
                 WebkitMaskSize: "contain",
@@ -136,11 +136,11 @@ export function ManageCourses() {
         {/* Right Side: Text and Features */}
         <div className="flex flex-col gap-[40px] lg:w-[580px] shrink-0">
           <div className="flex flex-col gap-6">
-            <h2 className="font-['Poppins:SemiBold'] text-[32px] md:text-[44px] leading-[1.2] text-[#242528] tracking-[-0.44px] max-w-[391px]">
+            <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-brand-gray-950 tracking-[-0.44px] max-w-[391px]">
               Create & Manage Courses Easily.
             </h2>
-            <p className="font-['Satoshi:Regular'] text-[16px] md:text-[18px] leading-[1.6] text-[#4b4c53] max-w-[574px]">
-              <span className="font-['Satoshi:Bold'] text-[#242528]">
+            <p className="font-body font-normal text-[16px] md:text-[18px] leading-[1.6] text-brand-text-secondary max-w-[574px]">
+              <span className="font-body font-bold text-brand-gray-950">
                 ByteSpace
               </span>{" "}
               supports individuals or entities in the creation, publication, and
@@ -164,7 +164,7 @@ export function ManageCourses() {
                     className="object-contain"
                   />
                 </div>
-                <span className="font-['Satoshi:Medium'] text-[16px] md:text-[18px] text-[#242528] leading-[1.2]">
+                <span className="font-body font-medium text-[16px] md:text-[18px] text-brand-gray-950 leading-[1.2]">
                   {feature}
                 </span>
               </div>

@@ -4,7 +4,7 @@ import { Header } from "../layout/Header";
 
 export function Hero() {
   return (
-    <div className="relative w-full min-h-screen lg:min-h-[1024px] bg-[#003be2] overflow-hidden flex flex-col items-center">
+    <div className="relative w-full min-h-screen lg:min-h-[1024px] bg-brand-blue overflow-hidden flex flex-col items-center">
       {/* Background Grid */}
       <div className="absolute inset-0 z-0 pointer-events-none flex justify-center w-full min-w-[1440px]">
         <Image
@@ -102,11 +102,11 @@ export function Hero() {
 
         {/* Text & Search */}
         <div className="flex flex-col items-center text-center w-full mt-12 md:mt-24 lg:mt-[94px] z-30">
-          <h1 className="font-['Poppins:SemiBold'] text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.1] lg:leading-[1.2] tracking-[-0.72px] text-white max-w-[935px]">
+          <h1 className="font-heading font-semibold text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.1] lg:leading-[1.2] tracking-[-0.72px] text-white max-w-[935px]">
             Get Access to Hundreds
             <br className="hidden sm:block" /> Courses Available
           </h1>
-          <p className="mt-6 md:mt-8 font-['Satoshi:Regular'] text-[#e5e6e8] text-sm sm:text-base md:text-[18px] leading-[1.6] max-w-[600px]">
+          <p className="mt-6 md:mt-8 font-body font-normal text-[#e5e6e8] text-sm sm:text-base md:text-[18px] leading-[1.6] max-w-[600px]">
             Unlock your creativity, gain valuable knowledge, and grow your
             business with our wide range of courses.
           </p>
@@ -119,10 +119,10 @@ export function Hero() {
               <input
                 type="text"
                 placeholder="Course, topic, creator"
-                className="w-full outline-none bg-transparent ml-2 font-['Satoshi:Regular'] text-[#82868e] text-sm md:text-[18px]"
+                className="w-full outline-none bg-transparent ml-2 font-body font-normal text-brand-gray-400 text-sm md:text-[18px]"
               />
             </div>
-            <button className="bg-[#d4fb20] hover:bg-[#c4eb1a] transition-colors rounded-full h-[52px] px-8 flex items-center justify-center font-['Satoshi:Medium'] text-[#242528] text-[18px] w-full sm:w-auto shrink-0">
+            <button className="bg-brand-lime hover:bg-[#c4eb1a] transition-colors rounded-full h-[52px] px-8 flex items-center justify-center font-body font-medium text-brand-gray-950 text-[18px] w-full sm:w-auto shrink-0">
               Search
             </button>
           </div>
@@ -141,10 +141,10 @@ export function Hero() {
 
           {/* Floating Card: UI/UX Design (Left) */}
           <div className="absolute left-[0%] sm:left-[-4.6%] top-[23.4%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col w-[max-content] hover:-translate-y-1 transition-transform origin-top-left scale-75 sm:scale-100">
-            <p className="font-['Satoshi:Medium'] text-[#242528] text-[12px] md:text-[16px] leading-[1.2]">
+            <p className="font-body font-medium text-brand-gray-950 text-[12px] md:text-[16px] leading-[1.2]">
               UI/UX Design
             </p>
-            <div className="flex items-center gap-[8px] mt-1 font-['Satoshi:Regular'] text-[#82868e] text-[10px] md:text-[12px]">
+            <div className="flex items-center gap-[8px] mt-1 font-body font-normal text-brand-gray-400 text-[10px] md:text-[12px]">
               <span>200 Courses</span>
               <span className="text-[10px]">•</span>
               <span>1000+ Students</span>
@@ -153,27 +153,27 @@ export function Hero() {
 
           {/* Floating Card: Learning Progress (Right) */}
           <div className="absolute right-[0%] left-auto sm:right-auto sm:left-[71.1%] top-[25.6%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col gap-[8px] w-[140px] md:w-[200px] hover:-translate-y-1 transition-transform origin-bottom-right scale-75 sm:scale-100">
-            <p className="font-['Satoshi:Medium'] text-[#242528] text-[12px] md:text-[14px] leading-[1.2]">
+            <p className="font-body font-medium text-brand-gray-950 text-[12px] md:text-[14px] leading-[1.2]">
               Learning Progress
             </p>
-            <p className="font-['Poppins:SemiBold'] text-[#242528] text-[32px] md:text-[48px] leading-[1.2] tracking-[-0.48px]">
+            <p className="font-heading font-semibold text-brand-gray-950 text-[32px] md:text-[48px] leading-[1.2] tracking-[-0.48px]">
               55%
             </p>
             <div className="w-full h-[8px] bg-[#f6f6f6] rounded-full overflow-hidden relative flex">
-              <div className="h-full w-[55%] bg-[#d4fb20] rounded-full" />
+              <div className="h-full w-[55%] bg-brand-lime rounded-full" />
             </div>
           </div>
 
           {/* Floating Card: Happy Students (Bottom Left) */}
           <div className="absolute left-[0%] sm:left-[-17.8%] top-[60.0%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col gap-2 w-[max-content] hover:-translate-y-1 transition-transform origin-bottom-left scale-75 sm:scale-100">
-            <p className="font-['Satoshi:Medium'] text-[#242528] text-[14px] md:text-[16px] leading-[1.2]">
+            <p className="font-body font-medium text-brand-gray-950 text-[14px] md:text-[16px] leading-[1.2]">
               Happy Students
             </p>
             <div className="flex items-center gap-1">
-              <span className="font-['Satoshi:Regular'] text-[#242528] text-[10px] md:text-[12px] leading-[1.6]">
+              <span className="font-body font-normal text-brand-gray-950 text-[10px] md:text-[12px] leading-[1.6]">
                 4.5
               </span>
-              <span className="font-['Satoshi:Regular'] text-[#82868e] text-[10px] md:text-[12px] leading-[1.6]">
+              <span className="font-body font-normal text-brand-gray-400 text-[10px] md:text-[12px] leading-[1.6]">
                 (240)
               </span>
               <div className="relative w-[16px] h-[16px] ml-1">
@@ -209,7 +209,7 @@ export function Hero() {
                   className="object-cover -z-10 absolute inset-0"
                   alt=""
                 />
-                <span className="font-['Satoshi:Bold'] text-[#242528] text-[10px] md:text-[12px] relative z-10">
+                <span className="font-body font-bold text-brand-gray-950 text-[10px] md:text-[12px] relative z-10">
                   2K+
                 </span>
               </div>
