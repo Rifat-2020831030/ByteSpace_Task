@@ -31,4 +31,27 @@ export const ASSETS = {
     rect1: "/assets/mask-rect-1.png",
     rect2: "/assets/mask-rect-2.png",
   },
+  partners: {
+    partner1: "/assets/partner-1.svg",
+    partner2: "/assets/partner-2.svg",
+    partner3: "/assets/partner-3.svg",
+    partner4: "/assets/partner-4.svg",
+    partner5: "/assets/partner-5.svg",
+  },
+  categories: {
+    design: "/assets/category-icon-1.svg",
+    dev: "/assets/category-icon-2.svg",
+    it: "/assets/category-icon-3.svg",
+    business: "/assets/category-icon-4.svg",
+    marketing: "/assets/category-icon-5.svg",
+    photo: "/assets/category-icon-6.svg",
+  },
+  courses: {
+    course1: "/assets/course-card-1.png",
+    course2: "/assets/course-card-2.png",
+    course3: "/assets/course-card-3.png",
+    course4: "/assets/course-card-4.png",
+    course5: "/assets/course-card-5.png",
+    course6: "/assets/course-card-6.png",
+  },
 } as const;
