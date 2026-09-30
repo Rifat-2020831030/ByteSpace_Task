@@ -1,4 +1,5 @@
 import { Categories } from "@/components/home/Categories";
+import { CreatorCTA } from "@/components/home/CreatorCTA";
 import { FeaturedCourses } from "@/components/home/FeaturedCourses";
 import { Hero } from "@/components/home/Hero";
 import { ManageCourses } from "@/components/home/ManageCourses";
@@ -30,6 +31,8 @@ export default function Home() {
           <ManageCourses />
         </div>
       </div>
+
+      <CreatorCTA />
     </div>
   );
 }

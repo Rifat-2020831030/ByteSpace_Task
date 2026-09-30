@@ -62,4 +62,13 @@ export const ASSETS = {
     shape2: "/assets/growth-shape-2.png",
     bg: "/assets/growth-bg.svg",
   },
+  cta: {
+    shape1: "/assets/cta-shape-1.png",
+    shape2: "/assets/cta-shape-2.png",
+    shape3: "/assets/cta-shape-3.png",
+    shape4: "/assets/cta-shape-4.png",
+    shape5: "/assets/cta-shape-5.png",
+    shape6: "/assets/cta-shape-6.png",
+    grid: "/assets/cta-grid.svg",
+  },
 } as const;
