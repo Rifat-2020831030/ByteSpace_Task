@@ -5,6 +5,7 @@ import { Hero } from "@/components/home/Hero";
 import { ManageCourses } from "@/components/home/ManageCourses";
 import { Partners } from "@/components/home/Partners";
 import { ProfessionalGrowth } from "@/components/home/ProfessionalGrowth";
+import { Testimonials } from "@/components/home/Testimonials";
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
 
@@ -33,6 +34,7 @@ export default function Home() {
       </div>
 
       <CreatorCTA />
+      <Testimonials />
     </div>
   );
 }

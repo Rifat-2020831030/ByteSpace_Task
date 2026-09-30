@@ -71,4 +71,7 @@ export const ASSETS = {
     shape6: "/assets/cta-shape-6.png",
     grid: "/assets/cta-grid.svg",
   },
+  testimonials: {
+    bg: "/assets/testimonials-bg.svg",
+  },
 } as const;
