@@ -1,12 +1,17 @@
 export function LearningProgressCard() {
   return (
-    <div className="bg-background rounded-2xl p-4 shadow-xl border w-[232px] flex flex-col gap-4 absolute">
-      <h3 className="text-sm font-medium text-muted-foreground">Learning Progress</h3>
-      <div className="flex flex-col gap-2">
-        <span className="text-4xl font-bold">55%</span>
-        <div className="h-2 w-full bg-muted rounded-full overflow-hidden">
-          <div className="h-full bg-primary w-[55%] rounded-full" />
-        </div>
+    <div className="absolute backdrop-blur-[10px] bg-white flex flex-col gap-[8px] items-start p-[16px] rounded-[16px]">
+      <p className="font-medium text-[#242528] text-[14px] leading-[1.2]">
+        Learning Progress
+      </p>
+      <div className="flex flex-col items-start w-[200px]">
+        <p className="font-semibold text-[#242528] text-[48px] tracking-[-0.48px] leading-[1.2]">
+          55%
+        </p>
+      </div>
+      <div className="relative h-[8px] w-[200px]">
+        <div className="absolute inset-0 bg-[#f6f6f6] rounded-[24px]" />
+        <div className="absolute inset-y-0 left-0 bg-[#d4fb20] rounded-[24px] w-[112px]" />
       </div>
     </div>
   );
@@ -14,22 +19,38 @@ export function LearningProgressCard() {
 
 export function HappyStudentsCard() {
   return (
-    <div className="bg-background rounded-2xl p-4 shadow-xl border w-[258px] flex flex-col gap-4 absolute">
-      <div className="flex flex-col gap-1">
-        <h3 className="text-sm font-medium text-muted-foreground">Happy Students</h3>
-        <div className="flex items-center gap-1 text-sm font-semibold">
-          <span>4.5 (240)</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-yellow-400">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+    <div className="absolute backdrop-blur-[10px] bg-white flex flex-col gap-[8px] items-start justify-center p-[16px] rounded-[16px] w-[258px]">
+      <div className="flex flex-col items-start">
+        <p className="font-medium text-[#242528] text-[16px] leading-[1.2]">
+          Happy Students
+        </p>
+        <div className="flex items-center gap-1">
+          <p className="text-[12px] leading-[1.6]">
+            <span className="text-[#242528]">4.5 </span>
+            <span className="text-[#82868e]">(240)</span>
+          </p>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="text-[#FFC107]"
+          >
+            <path d="M8 2l2.05 4.18L14.67 6.8l-3.34 3.25L12.11 14 8 11.84 3.89 14l.78-3.95L1.33 6.8l4.62-.62L8 2z" />
           </svg>
         </div>
       </div>
-      <div className="flex items-center -space-x-3">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-muted" />
+      <div className="flex items-center mt-2">
+        {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+          <div
+            key={i}
+            className="w-[43px] h-[43px] -mr-[16px] rounded-full border-2 border-white bg-[#f6f6f6]"
+          />
         ))}
-        <div className="w-10 h-10 rounded-full border-2 border-background bg-primary flex items-center justify-center">
-          <span className="text-[10px] font-bold text-primary-foreground">2K+</span>
+        <div className="w-[43px] h-[43px] rounded-full bg-[#f6f6f6] border-2 border-white flex items-center justify-center ml-[16px] z-10">
+          <p className="font-bold text-[#242528] text-[12px] leading-[1.5]">
+            2K+
+          </p>
         </div>
       </div>
     </div>
@@ -38,12 +59,14 @@ export function HappyStudentsCard() {
 
 export function UiUxDesignCard() {
   return (
-    <div className="bg-background rounded-2xl p-4 shadow-xl border w-[208px] flex flex-col gap-1 absolute">
-      <h3 className="text-sm font-bold">UI/UX Design</h3>
-      <div className="flex items-center gap-2 text-xs text-muted-foreground">
-        <span>200 Courses</span>
-        <span>•</span>
-        <span>1000+ Students</span>
+    <div className="absolute backdrop-blur-[10px] bg-white flex flex-col items-start justify-center p-[16px] rounded-[16px]">
+      <p className="font-medium text-[#242528] text-[16px] leading-[1.2]">
+        UI/UX Design
+      </p>
+      <div className="flex items-center gap-[8px] text-[#82868e] mt-1">
+        <p className="text-[12px] leading-[1.6]">200 Courses</p>
+        <p className="text-[10px] leading-[1.5]">•</p>
+        <p className="text-[12px] leading-[1.6]">1000+ Students</p>
       </div>
     </div>
   );
