@@ -25,6 +25,7 @@ export const ASSETS = {
     search: "/assets/icon-search.svg",
     menu: "/assets/icon-menu.svg",
     logo: "/assets/logo-icon.svg",
+    logoDark: "/assets/logo-icon-dark.svg",
     star: "/assets/icon-star.svg",
     check: "/assets/icon-check.svg",
   },

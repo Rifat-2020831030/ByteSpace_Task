@@ -6,6 +6,7 @@ import { ManageCourses } from "@/components/home/ManageCourses";
 import { Partners } from "@/components/home/Partners";
 import { ProfessionalGrowth } from "@/components/home/ProfessionalGrowth";
 import { Testimonials } from "@/components/home/Testimonials";
+import { Footer } from "@/components/layout/Footer";
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
 
@@ -35,6 +36,7 @@ export default function Home() {
 
       <CreatorCTA />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
