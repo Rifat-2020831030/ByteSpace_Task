@@ -15,41 +15,41 @@ export function Header() {
         <div className="relative w-[28.8px] h-[31.5px]">
           <Image src={ASSETS.icons.logo} alt="ByteSpace" fill />
         </div>
-        <span className="font-['Clash_Display:Bold'] text-[#f5f5f6] text-[24px]">
+        <span className="font-logo font-bold text-brand-gray-50 text-[24px]">
           ByteSpace
         </span>
       </Link>
 
       {/* Nav Links - Hidden on Mobile */}
-      <nav className="hidden md:flex items-center gap-[24px] text-[#f5f5f6]">
-        <Link href="#" className="font-['Satoshi:Medium'] text-[16px]">
+      <nav className="hidden md:flex items-center gap-[24px] text-brand-gray-50">
+        <Link href="#" className="font-body font-medium text-[16px]">
           Home
         </Link>
         <Link
           href="#"
-          className="font-['Satoshi:Regular'] text-[16px] hover:text-white transition-colors"
+          className="font-body font-normal text-[16px] hover:text-white transition-colors"
         >
           Courses
         </Link>
         <Link
           href="#"
-          className="font-['Satoshi:Regular'] text-[16px] hover:text-white transition-colors"
+          className="font-body font-normal text-[16px] hover:text-white transition-colors"
         >
           Creators
         </Link>
       </nav>
 
       {/* Auth & Cart/Menu Button */}
-      <div className="flex items-center gap-[24px] text-[#f5f5f6]">
+      <div className="flex items-center gap-[24px] text-brand-gray-50">
         <Link
           href="#"
-          className="font-['Satoshi:Regular'] text-[16px] hidden sm:block hover:text-white transition-colors"
+          className="font-body font-normal text-[16px] hidden sm:block hover:text-white transition-colors"
         >
           Sign In
         </Link>
         <Link
           href="#"
-          className="font-['Satoshi:Regular'] text-[16px] hidden sm:block hover:text-white transition-colors"
+          className="font-body font-normal text-[16px] hidden sm:block hover:text-white transition-colors"
         >
           Join Us
         </Link>
@@ -84,26 +84,26 @@ export function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="absolute top-[60px] right-0 w-[200px] bg-white rounded-[16px] p-4 shadow-xl flex flex-col gap-4 md:hidden text-[#242528] z-50 animate-in slide-in-from-top-2">
-          <Link href="#" className="font-['Satoshi:Medium'] text-[16px]">
+        <div className="absolute top-[60px] right-0 w-[200px] bg-white rounded-[16px] p-4 shadow-xl flex flex-col gap-4 md:hidden text-brand-gray-950 z-50 animate-in slide-in-from-top-2">
+          <Link href="#" className="font-body font-medium text-[16px]">
             Home
           </Link>
-          <Link href="#" className="font-['Satoshi:Regular'] text-[16px]">
+          <Link href="#" className="font-body font-normal text-[16px]">
             Courses
           </Link>
-          <Link href="#" className="font-['Satoshi:Regular'] text-[16px]">
+          <Link href="#" className="font-body font-normal text-[16px]">
             Creators
           </Link>
           <hr className="border-gray-100" />
           <Link
             href="#"
-            className="font-['Satoshi:Regular'] text-[16px] sm:hidden"
+            className="font-body font-normal text-[16px] sm:hidden"
           >
             Sign In
           </Link>
           <Link
             href="#"
-            className="font-['Satoshi:Regular'] text-[16px] sm:hidden"
+            className="font-body font-normal text-[16px] sm:hidden"
           >
             Join Us
           </Link>
