@@ -3,6 +3,7 @@ import { FooterService } from "@/services/footer.service";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
+import { Input } from "../ui/Input";
 
 const FooterLink = ({
   href,
@@ -44,15 +45,14 @@ export async function Footer() {
             </div>
 
             <div className="flex flex-col gap-[24px]">
-              <form className="flex flex-col sm:flex-row gap-[24px] items-start sm:items-center">
-                <div className="flex-1 w-full sm:max-w-[376px] h-[52px] px-[24px] rounded-[100px] border border-brand-gray-200 bg-white flex items-center">
-                  <input
+              <form className="flex flex-col sm:flex-row gap-[24px] items-start sm:items-center w-full">
+                <div className="flex-1 w-full sm:max-w-[376px]">
+                  <Input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full h-full outline-none font-body font-normal text-[16px] text-brand-gray-950 placeholder:text-brand-gray-950"
                   />
                 </div>
-                <Button type="submit" size="lg" rounded="24px">
+                <Button type="submit" size="lg" className="w-full sm:w-auto" rounded="24px">
                   Search
                 </Button>
               </form>

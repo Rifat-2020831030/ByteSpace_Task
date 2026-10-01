@@ -3,10 +3,11 @@ import React, { InputHTMLAttributes } from "react";
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
+  leftIcon?: React.ReactNode;
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, className = "", id, ...props }, ref) => {
+  ({ label, error, leftIcon, className = "", id, ...props }, ref) => {
     const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
 
     return (
@@ -20,6 +21,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           </label>
         )}
         <div className="bg-white border border-brand-gray-100 flex h-[52px] items-center px-[24px] py-[12px] rounded-[12px] w-full focus-within:border-brand-blue focus-within:ring-1 focus-within:ring-brand-blue transition-all">
+          {leftIcon && <div className="mr-[8px] flex items-center justify-center">{leftIcon}</div>}
           <input
             id={inputId}
             ref={ref}
