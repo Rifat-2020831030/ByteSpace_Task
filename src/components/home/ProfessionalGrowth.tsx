@@ -67,7 +67,6 @@ export async function ProfessionalGrowth() {
           {/* Floating Course Card - BEHIND the student (z-10) */}
           <div className="absolute -left-4 md:-left-[50px] top-[20px] md:top-[120px] scale-[0.6] md:scale-[0.75] origin-top-left z-10 pointer-events-none opacity-80 md:opacity-100">
             <CourseCard
-              variant="floating"
               course={featuredCourse}
             />
           </div>

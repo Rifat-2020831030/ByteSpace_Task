@@ -2,8 +2,8 @@ import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { CourseCard } from "../ui/CourseCard";
 import { AvatarGroup } from "../ui/AvatarGroup";
+import { CourseCard } from "../ui/CourseCard";
 import { TintedShape } from "../ui/TintedShape";
 
 export type AuthLayoutProps = {
@@ -12,14 +12,18 @@ export type AuthLayoutProps = {
   children: React.ReactNode;
 };
 
-export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutProps) {
+export function AuthLayout({
+  leftTitle,
+  leftDescription,
+  children,
+}: AuthLayoutProps) {
   // Mock courses for the floating cards based on Figma
   const course1 = {
     title: "Build Digital Asset",
     author: "purepearl studio",
     level: "Beginner",
     price: "$25",
-    image: ASSETS.courses.course1,
+    image: ASSETS.courses.course2,
     lessons: 17,
     duration: "2 hours 16 mins",
     comments: 59,
@@ -32,7 +36,7 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
     author: "purepearl studio",
     level: "Beginner",
     price: "$25",
-    image: ASSETS.courses.course2,
+    image: ASSETS.courses.course3,
     lessons: 17,
     duration: "2 hours 16 mins",
     comments: 59,
@@ -55,7 +59,6 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
 
       {/* Main Container */}
       <div className="relative z-10 w-full max-w-[1440px] min-h-[1024px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-[122px] py-[35px] lg:py-[120px]">
-        
         {/* Header Logo (Absolute on Desktop, relative on Mobile) */}
         <div className="lg:absolute left-6 lg:left-[122px] top-[35px] z-50">
           <Link href="/" className="flex items-center gap-2">
@@ -84,21 +87,27 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
           <div className="relative w-full h-[600px] mt-[65px] -ml-[25px]">
             {/* Card 1 */}
             <div className="absolute left-[25px] top-[89px] z-10">
-              <CourseCard course={course1} variant="floating" />
+              <CourseCard course={course1} />
             </div>
 
             {/* Card 2 */}
             <div className="absolute left-[136px] top-0 z-20">
-              <CourseCard course={course2} variant="floating" />
+              <CourseCard course={course2} />
             </div>
 
             {/* Happy Students */}
             <div className="absolute left-[133px] top-[435px] z-30 backdrop-blur-[10px] bg-brand-lime p-[16px] rounded-[16px] w-[258px] flex flex-col gap-[8px]">
               <div className="flex flex-col text-brand-gray-950">
-                <span className="font-body font-medium text-[16px] leading-[1.5]">Happy Students</span>
+                <span className="font-body font-medium text-[16px] leading-[1.5]">
+                  Happy Students
+                </span>
                 <div className="flex items-center gap-1">
-                  <span className="font-body font-bold text-[10px] leading-[1.5]">4.5</span>
-                  <span className="font-body font-normal text-brand-text-secondary text-[10px] leading-[1.5]">(240)</span>
+                  <span className="font-body font-bold text-[10px] leading-[1.5]">
+                    4.5
+                  </span>
+                  <span className="font-body font-normal text-brand-text-secondary text-[10px] leading-[1.5]">
+                    (240)
+                  </span>
                   <div className="relative w-[16px] h-[16px]">
                     <Image src={ASSETS.icons.star} alt="Star" fill />
                   </div>
@@ -116,13 +125,13 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
                 ]}
                 countText="2K+"
                 avatarClassName="w-[43px] h-[43px] -ml-[16px] first:ml-0"
-                badgeClassName="w-[43px] h-[43px] -ml-[16px] bg-brand-gray-200 text-brand-gray-50 text-[12px]"
+                badgeClassName="w-[43px] h-[43px] -ml-[16px] bg-brand-gray-950 text-brand-gray-50 text-[12px]"
               />
             </div>
 
             {/* 3D Shapes */}
             <TintedShape
-              src={ASSETS.shapes.shape1}
+              src={ASSETS.shapes.shape2}
               color="bg-brand-gray-50"
               className="w-[175px] h-[175px] left-[373px] top-[321px]"
               flip
@@ -133,7 +142,7 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
               className="w-[146px] h-[146px] left-[54px] top-[15px]"
             />
             <TintedShape
-              src={ASSETS.shapes.cone2}
+              src={ASSETS.shapes.cone3}
               color="bg-brand-lime"
               className="w-[188px] h-[188px] left-[0px] top-[397px]"
             />
