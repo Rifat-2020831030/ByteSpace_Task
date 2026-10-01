@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { SocialLogins } from "@/components/ui/SocialLogins";
 import Link from "next/link";
-import React from "react";
 
 export default function LoginPage() {
   return (
@@ -22,18 +21,20 @@ export default function LoginPage() {
         </div>
 
         <form className="flex flex-col gap-[24px] w-full max-w-[453px] items-end">
-          <Input 
-            label="Email" 
-            placeholder="designer@example.com" 
-            type="email" 
+          <Input
+            label="Email"
+            placeholder="designer@example.com"
+            type="email"
           />
-          <Input 
-            label="Password" 
-            placeholder="********" 
-            type="password" 
-          />
-          
-          <Button variant="primary" size="lg" rounded="24px" className="mt-2" type="button">
+          <Input label="Password" placeholder="********" type="password" />
+
+          <Button
+            variant="primary"
+            size="lg"
+            rounded="24px"
+            className="mt-2"
+            type="button"
+          >
             Sign In
           </Button>
         </form>
@@ -41,7 +42,7 @@ export default function LoginPage() {
         <SocialLogins />
       </div>
 
-      <div className="flex items-start gap-1 font-body font-normal text-[16px] leading-[1.6] mt-8">
+      <div className="flex items-center justify-center gap-1 font-body font-normal text-[16px] leading-[1.6] mt-8">
         <span className="text-brand-text-tertiary">New user?</span>
         <Link href="/register" className="text-brand-blue hover:underline">
           Create an account

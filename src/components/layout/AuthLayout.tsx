@@ -17,7 +17,7 @@ export function AuthLayout({
   leftDescription,
   children,
 }: AuthLayoutProps) {
-  // Mock courses for the floating cards based on Figma
+  // Mock courses data for the course cards
   const course1 = {
     title: "Build Digital Asset",
     author: "purepearl studio",
@@ -58,7 +58,7 @@ export function AuthLayout({
       </div>
 
       {/* Main Container */}
-      <div className="relative z-10 w-full max-w-[1440px] min-h-[1024px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-[122px] py-[35px] lg:py-[120px]">
+      <div className="relative z-10 w-full max-w-[1440px] min-h-[1024px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-[122px] pt-[35px] pb-[48px] lg:py-[120px]">
         {/* Header Logo (Absolute on Desktop, relative on Mobile) */}
         <div className="lg:absolute left-6 lg:left-[122px] top-[35px] z-50">
           <Link href="/" className="flex items-center gap-2">
@@ -85,36 +85,18 @@ export function AuthLayout({
 
           {/* Graphics Container */}
           <div className="relative w-full h-[600px] mt-[65px] -ml-[25px]">
-            {/* 3D Shapes (Rendered first to stay behind cards) */}
-            <TintedShape
-              src={ASSETS.shapes.shape1}
-              color="bg-brand-gray-50"
-              className="w-[175px] h-[175px] left-[373px] top-[321px] z-0"
-              flip
-            />
-            <TintedShape
-              src={ASSETS.shapes.cone1}
-              color="bg-brand-lime"
-              className="w-[146px] h-[146px] left-[54px] top-[15px] z-0"
-            />
-            <TintedShape
-              src={ASSETS.shapes.cone2}
-              color="bg-brand-lime"
-              className="w-[188px] h-[188px] left-[0px] top-[397px] z-0"
-            />
-
             {/* Card 1 */}
-            <div className="absolute left-[25px] top-[89px] z-10">
-              <CourseCard course={course1} />
-            </div>
-
-            {/* Card 2 */}
             <div className="absolute left-[136px] top-0 z-20">
               <CourseCard course={course2} />
             </div>
 
+            {/* Card 2 */}
+            <div className="absolute left-[25px] top-[110px] z-10">
+              <CourseCard course={course1} />
+            </div>
+
             {/* Happy Students */}
-            <div className="absolute left-[251px] top-[435px] z-30 backdrop-blur-[10px] bg-brand-lime p-[16px] rounded-[16px] w-[258px] flex flex-col gap-[8px]">
+            <div className="absolute left-[220px] top-[400px] z-20 backdrop-blur-[10px] bg-brand-lime p-[16px] rounded-[16px] w-[258px] flex flex-col gap-[8px]">
               <div className="flex flex-col text-brand-gray-950">
                 <span className="font-body font-medium text-[16px] leading-[1.5]">
                   Happy Students
@@ -148,21 +130,24 @@ export function AuthLayout({
             </div>
 
             {/* 3D Shapes */}
+            {/* bottom right spiral */}
             <TintedShape
               src={ASSETS.shapes.shape2}
               color="bg-brand-gray-50"
-              className="w-[175px] h-[175px] left-[373px] top-[321px]"
+              className="w-[175px] h-[175px] left-[300px] top-[280px] z-30 object-cover"
               flip
             />
+            {/* top left donut */}
             <TintedShape
               src={ASSETS.shapes.cone1}
               color="bg-brand-lime"
-              className="w-[146px] h-[146px] left-[54px] top-[15px]"
+              className="w-[146px] h-[146px] left-[54px] top-[30px] z-30"
             />
+            {/* bottom left pine */}
             <TintedShape
               src={ASSETS.shapes.cone3}
               color="bg-brand-lime"
-              className="w-[188px] h-[188px] left-[0px] top-[397px]"
+              className="w-[188px] h-[188px] left-[0px] top-[350px] z-15"
             />
           </div>
         </div>
