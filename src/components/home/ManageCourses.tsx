@@ -7,7 +7,7 @@ import { MiniStatCard } from "../ui/MiniStatCard";
 
 export function ManageCourses() {
   return (
-    <section className="relative w-full py-16 md:py-32 flex justify-center overflow-hidden">
+    <section className="relative w-full pt-8 md:pt-[36px] pb-16 md:pb-32 flex justify-center overflow-hidden">
       <div className="relative z-10 max-w-[1440px] w-full px-4 sm:px-6 lg:px-24 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-[79px]">
         {/* Left Side: Image and Floating Cards */}
         <div className="relative w-full max-w-[541px] aspect-[541/596] shrink-0 mt-8 lg:mt-0">

@@ -8,7 +8,7 @@ export async function Categories() {
 
   return (
     <section className="w-full bg-white py-16 md:py-24 flex justify-center">
-      <div className="max-w-[1200px] w-full px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-12 text-center">
+      <div className="max-w-[1440px] w-full px-4 sm:px-6 lg:px-24 flex flex-col items-center gap-12 text-center">
         <SectionHeader
           title="Explore Diverse Learning Paths at Bytespace"
           description={
