@@ -14,7 +14,7 @@ const FooterLink = ({
 }) => (
   <Link
     href={href}
-    className="font-body font-normal text-[14px] leading-[1.6] text-brand-gray-950 hover:text-brand-blue transition-colors"
+    className="font-body font-normal text-sm leading-[1.6] text-brand-gray-950 hover:text-brand-blue transition-colors"
   >
     {children}
   </Link>
@@ -34,11 +34,11 @@ export async function Footer() {
                 <div className="relative w-[28.875px] h-[31.5px]">
                   <Image src={ASSETS.icons.logoDark} alt="ByteSpace" fill  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
-                <span className="font-logo font-bold text-brand-gray-950 text-[24px]">
+                <span className="font-logo font-bold text-brand-gray-950 text-2xl">
                   ByteSpace
                 </span>
               </Link>
-              <p className="font-body font-normal text-[14px] leading-[1.6] text-brand-gray-950">
+              <p className="font-body font-normal text-sm leading-[1.6] text-brand-gray-950">
                 Stay Up to date with our latest features and releases by joining
                 our newsletter.
               </p>
@@ -56,7 +56,7 @@ export async function Footer() {
                   Search
                 </Button>
               </form>
-              <p className="font-body font-normal text-[12px] leading-[1.6] text-brand-gray-950 max-w-[504px]">
+              <p className="font-body font-normal text-xs leading-[1.6] text-brand-gray-950 max-w-[504px]">
                 By subscribing, you agree to our Privacy Policy and consent to
                 receive updates from our company.
               </p>
@@ -67,7 +67,7 @@ export async function Footer() {
           <div className="flex flex-wrap md:flex-nowrap gap-10 md:gap-[40px] xl:max-w-[580px] w-full items-end">
             {/* Browse Column 1 */}
             <div className="flex flex-col gap-[24px] flex-1 min-w-[140px]">
-              <h4 className="font-body font-normal text-[16px] leading-[24px] text-transparent select-none">
+              <h4 className="font-body font-normal text-base leading-[1.5rem] text-transparent select-none">
                 Browse
               </h4>
               <div className="flex flex-col gap-[16px]">
@@ -90,7 +90,7 @@ export async function Footer() {
 
             {/* Platform Column */}
             <div className="flex flex-col gap-[24px] flex-1 min-w-[140px]">
-              <h4 className="font-body font-normal text-[16px] leading-[24px] text-transparent select-none">
+              <h4 className="font-body font-normal text-base leading-[1.5rem] text-transparent select-none">
                 Platform
               </h4>
               <div className="flex flex-col gap-[16px]">
@@ -107,7 +107,7 @@ export async function Footer() {
         {/* Bottom Section: Copyright */}
         <div className="flex flex-col gap-6 pt-6 border-t border-brand-gray-200 w-full">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <p className="font-body font-normal text-[12px] leading-[1.6] text-brand-gray-950">
+            <p className="font-body font-normal text-xs leading-[1.6] text-brand-gray-950">
               @ 2023 ByteSpace. All rights reserved.
             </p>
             <div className="flex items-center gap-[24px] flex-wrap">
@@ -115,7 +115,7 @@ export async function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="font-body font-normal text-[12px] leading-[1.6] text-brand-gray-950 hover:text-brand-blue transition-colors"
+                  className="font-body font-normal text-xs leading-[1.6] text-brand-gray-950 hover:text-brand-blue transition-colors"
                 >
                   {link.label}
                 </Link>

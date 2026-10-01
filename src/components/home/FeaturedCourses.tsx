@@ -35,7 +35,7 @@ export async function FeaturedCourses() {
                 <Button
                   key={index}
                   variant="ghost"
-                  className="px-4 py-2 h-auto text-brand-blue hover:bg-transparent text-[16px]"
+                  className="px-4 py-2 h-auto text-brand-blue hover:bg-transparent text-base"
                 >
                   + More
                 </Button>
@@ -46,7 +46,7 @@ export async function FeaturedCourses() {
                 key={index}
                 variant={index === 0 ? "primary" : "secondary"}
                 rounded="24px"
-                className="px-5 py-2.5 h-auto text-[16px]"
+                className="px-5 py-2.5 h-auto text-base"
               >
                 {filter}
               </Button>

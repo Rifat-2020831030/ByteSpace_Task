@@ -1,11 +1,11 @@
 import { ASSETS } from "@/lib/assets";
+import { PlatformService } from "@/services/platform.service";
 import Image from "next/image";
 import { Header } from "../layout/Header";
-import { LearningProgressCard } from "../ui/LearningProgressCard";
+import { AvatarGroup } from "../ui/AvatarGroup";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
-import { AvatarGroup } from "../ui/AvatarGroup";
-import { PlatformService } from "@/services/platform.service";
+import { LearningProgressCard } from "../ui/LearningProgressCard";
 
 export async function Hero() {
   const navLinks = await PlatformService.getNavLinks();
@@ -20,7 +20,8 @@ export async function Hero() {
           src={ASSETS.hero.gridBg}
           fill
           priority
-         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
 
       {/* Fixed 1440x1024 Absolute Background Layer for 3D Shapes & Glow */}
@@ -34,7 +35,8 @@ export async function Hero() {
             src={ASSETS.hero.ellipseBg}
             fill
             priority
-           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
 
         {/* 3D Decorative Ornaments */}
@@ -45,7 +47,8 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-shuttle-gray"
               src={ASSETS.shapes.shape1}
               fill
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute animate-float bottom-[40.82%] left-[calc(50%-645.5px)] top-[21.58%] w-[385px]">
@@ -55,7 +58,8 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-electric-lime"
               src={ASSETS.shapes.shape2}
               fill
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute animate-float bottom-[36.33%] flex items-center justify-center left-[calc(50%-449.5px)] top-[46.58%] w-[175px]">
@@ -66,7 +70,8 @@ export async function Hero() {
                 className="absolute inset-0 max-w-none object-cover pointer-events-none size-full scale-x-[-1] tint-shuttle-gray"
                 src={ASSETS.shapes.shape2}
                 fill
-               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           </div>
         </div>
@@ -77,7 +82,8 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-shuttle-gray"
               src={ASSETS.shapes.cone1}
               fill
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute animate-float bottom-[42.29%] left-[calc(50%+696px)] top-[21.58%] w-[370px]">
@@ -87,7 +93,8 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-electric-lime"
               src={ASSETS.shapes.cone2}
               fill
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute animate-float bottom-[36.33%] left-[calc(50%+480px)] top-[45.31%] w-[188px]">
@@ -97,7 +104,8 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-shuttle-gray"
               src={ASSETS.shapes.cone3}
               fill
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
         </div>
       </div>
@@ -109,11 +117,11 @@ export async function Hero() {
 
         {/* Text & Search */}
         <div className="flex flex-col items-center text-center w-full mt-12 md:mt-24 lg:mt-[94px] z-30">
-          <h1 className="font-heading font-semibold text-[40px] sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.1] lg:leading-[1.2] tracking-[-0.72px] text-white max-w-[935px]">
+          <h1 className="font-heading font-semibold text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] lg:leading-[1.2] tracking-[-0.045rem] text-white max-w-[935px]">
             Get Access to Hundreds
             <br className="hidden sm:block" /> Courses Available
           </h1>
-          <p className="mt-6 md:mt-8 font-body font-normal text-[#e5e6e8] text-sm sm:text-base md:text-[18px] leading-[1.6] max-w-[600px]">
+          <p className="mt-6 md:mt-8 font-body font-normal text-[#e5e6e8] text-sm sm:text-base md:text-lg leading-[1.6] max-w-[600px]">
             Unlock your creativity, gain valuable knowledge, and grow your
             business with our wide range of courses.
           </p>
@@ -125,7 +133,12 @@ export async function Hero() {
                 placeholder="Course, topic, creator"
                 leftIcon={
                   <div className="w-[24px] h-[24px] relative shrink-0">
-                    <Image src={ASSETS.icons.search} alt="Search" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    <Image
+                      src={ASSETS.icons.search}
+                      alt="Search"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                   </div>
                 }
                 className="w-full"
@@ -146,16 +159,17 @@ export async function Hero() {
             fill
             className="object-cover object-bottom"
             priority
-           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
 
           {/* Floating Card: UI/UX Design (Left) */}
           <div className="absolute left-[0%] sm:left-[-4.6%] top-[23.4%] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col w-[max-content] hover:-translate-y-1 transition-transform origin-top-left scale-75 sm:scale-100">
-            <p className="font-body font-medium text-brand-gray-950 text-[12px] md:text-[16px] leading-[1.2]">
+            <p className="font-body font-medium text-brand-gray-950 text-xs md:text-base leading-[1.2]">
               UI/UX Design
             </p>
-            <div className="flex items-center gap-[8px] mt-1 font-body font-normal text-brand-gray-400 text-[10px] md:text-[12px]">
+            <div className="flex items-center gap-[8px] mt-1 font-body font-normal text-brand-gray-400 text-[0.625rem] md:text-xs">
               <span>200 Courses</span>
-              <span className="text-[10px]">•</span>
+              <span className="text-[0.625rem]">•</span>
               <span>1000+ Students</span>
             </div>
           </div>
@@ -169,18 +183,23 @@ export async function Hero() {
 
           {/* Floating Card: Happy Students (Bottom Left) */}
           <div className="absolute left-[0%] sm:left-[-17.8%] top-[60.0%] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col gap-2 w-[max-content] hover:-translate-y-1 transition-transform origin-bottom-left scale-75 sm:scale-100">
-            <p className="font-body font-medium text-brand-gray-950 text-[14px] md:text-[16px] leading-[1.2]">
+            <p className="font-body font-medium text-brand-gray-950 text-sm md:text-base leading-[1.2]">
               Happy Students
             </p>
             <div className="flex items-center gap-1">
-              <span className="font-body font-normal text-brand-gray-950 text-[10px] md:text-[12px] leading-[1.6]">
+              <span className="font-body font-normal text-brand-gray-950 text-[0.625rem] md:text-xs leading-[1.6]">
                 4.5
               </span>
-              <span className="font-body font-normal text-brand-gray-400 text-[10px] md:text-[12px] leading-[1.6]">
+              <span className="font-body font-normal text-brand-gray-400 text-[0.625rem] md:text-xs leading-[1.6]">
                 (240)
               </span>
               <div className="relative w-[16px] h-[16px] ml-1">
-                <Image src={ASSETS.icons.star} fill alt="star"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                <Image
+                  src={ASSETS.icons.star}
+                  fill
+                  alt="star"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
               </div>
             </div>
             <AvatarGroup
@@ -196,8 +215,8 @@ export async function Hero() {
               countText="2K+"
               badgeBg={ASSETS.avatars.badgeBg}
               containerClassName="mt-1"
-              avatarClassName="w-[32px] h-[32px] md:w-[43px] md:h-[43px] -ml-[12px] md:-ml-[16px] first:ml-0 border-[2px] border-white"
-              badgeClassName="font-body font-bold text-brand-gray-950 text-[10px] md:text-[12px]"
+              avatarClassName="w-[32px] h-[32px] md:w-[43px] md:h-[43px] -ml-[12px] md:-ml-[16px] first:ml-0"
+              badgeClassName="font-body font-bold text-brand-gray-950 text-[0.625rem] md:text-xs"
             />
           </div>
         </div>

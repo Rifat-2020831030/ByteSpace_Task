@@ -21,14 +21,14 @@ export function LearningProgressCard({
     >
       <p
         className={`font-body font-medium text-brand-gray-950 leading-[1.6] ${
-          isSm ? "text-[12px] md:text-[14px]" : "text-[14px]"
+          isSm ? "text-xs md:text-sm" : "text-sm"
         }`}
       >
         Learning Progress
       </p>
       <p
-        className={`font-heading font-semibold text-brand-gray-950 leading-[1.2] tracking-[-0.48px] ${
-          isSm ? "text-[32px] md:text-[48px]" : "text-[48px]"
+        className={`font-heading font-semibold text-brand-gray-950 leading-[1.2] tracking-[-0.03rem] ${
+          isSm ? "text-[2rem] md:text-5xl" : "text-5xl"
         }`}
       >
         {progress}%

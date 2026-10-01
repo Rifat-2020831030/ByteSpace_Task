@@ -24,12 +24,12 @@ export function SectionHeader({
       } ${className}`}
     >
       <h2
-        className={`font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-brand-gray-950 tracking-[-0.44px] ${titleClassName}`}
+        className={`font-heading font-semibold text-[2rem] md:text-[2.75rem] leading-[1.2] text-brand-gray-950 tracking-[-0.0275rem] ${titleClassName}`}
       >
         {title}
       </h2>
       <p
-        className={`font-body font-normal text-[16px] md:text-[18px] leading-[1.6] text-brand-text-secondary ${descriptionClassName}`}
+        className={`font-body font-normal text-base md:text-lg leading-[1.6] text-brand-text-secondary ${descriptionClassName}`}
       >
         {description}
       </p>

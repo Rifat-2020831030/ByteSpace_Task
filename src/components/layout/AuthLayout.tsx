@@ -68,23 +68,23 @@ export function AuthLayout({
             <div className="relative w-[28.8px] h-[31.5px]">
               <Image src={ASSETS.icons.logo} alt="ByteSpace" fill />
             </div>
-            {/* <span className="font-logo font-bold text-white text-[24px]">
+            {/* <span className="font-logo font-bold text-white text-2xl">
               ByteSpace
             </span> */}
           </Link>
 
           {/* Mobile Hamburger Menu Icon */}
-          <MobileMenu />
+          <MobileMenu hideOn="lg" />
         </div>
 
         {/* Left Side (Hidden on smaller screens, shown on lg) */}
         <div className="hidden lg:flex flex-col relative w-full h-full">
           {/* Text Section */}
           <div className="flex flex-col gap-[16px] text-brand-gray-50 max-w-[475px]">
-            <h1 className="font-heading font-semibold text-[20px] tracking-[-0.2px]">
+            <h1 className="font-heading font-semibold text-xl tracking-[-0.0125rem]">
               {leftTitle}
             </h1>
-            <p className="font-body font-normal text-[18px] leading-[1.6]">
+            <p className="font-body font-normal text-lg leading-[1.6]">
               {leftDescription}
             </p>
           </div>
@@ -104,14 +104,14 @@ export function AuthLayout({
             {/* Happy Students */}
             <div className="absolute left-[220px] top-[400px] z-20 backdrop-blur-[10px] bg-brand-lime p-[16px] rounded-[16px] w-[258px] flex flex-col gap-[8px]">
               <div className="flex flex-col text-brand-gray-950">
-                <span className="font-body font-medium text-[16px] leading-[1.5]">
+                <span className="font-body font-medium text-base leading-[1.5]">
                   Happy Students
                 </span>
                 <div className="flex items-center gap-1">
-                  <span className="font-body font-bold text-[10px] leading-[1.5]">
+                  <span className="font-body font-bold text-[0.625rem] leading-[1.5]">
                     4.5
                   </span>
-                  <span className="font-body font-normal text-brand-text-secondary text-[10px] leading-[1.5]">
+                  <span className="font-body font-normal text-brand-text-secondary text-[0.625rem] leading-[1.5]">
                     (240)
                   </span>
                   <div className="relative w-[16px] h-[16px]">
@@ -131,7 +131,7 @@ export function AuthLayout({
                 ]}
                 countText="2K+"
                 avatarClassName="w-[43px] h-[43px] -ml-[16px] first:ml-0"
-                badgeClassName="w-[43px] h-[43px] -ml-[16px] bg-brand-gray-950 text-brand-gray-50 text-[12px]"
+                badgeClassName="w-[43px] h-[43px] -ml-[16px] bg-brand-gray-950 text-brand-gray-50 text-xs"
               />
             </div>
 

@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import React from "react";
 
 export type AvatarGroupProps = {
   avatars: (string | StaticImageData)[];
@@ -30,7 +29,8 @@ export function AvatarGroup({
             fill
             className="object-cover"
             alt={`Avatar ${i + 1}`}
-           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
       ))}
       <div
@@ -40,11 +40,12 @@ export function AvatarGroup({
           <Image
             src={badgeBg}
             fill
-            className="object-cover -z-10 absolute inset-0"
+            className="object-cover z-30 absolute inset-0"
             alt="Badge Background"
-           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         )}
-        <span className="relative z-10">{countText}</span>
+        <span className="relative z-30">{countText}</span>
       </div>
     </div>
   );

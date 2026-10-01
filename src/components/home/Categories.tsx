@@ -20,7 +20,7 @@ export async function Categories() {
             </>
           }
           className="max-w-[917px]"
-          titleClassName="md:text-[36px] text-[#040819] tracking-[-0.36px]"
+          titleClassName="md:text-4xl text-[#040819] tracking-[-0.0225rem]"
           descriptionClassName="text-brand-gray-400"
         />
 

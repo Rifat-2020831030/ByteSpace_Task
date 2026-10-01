@@ -26,7 +26,7 @@ export function SearchBar() {
         />
       </div>
       <button className="bg-[#D4FB20] flex items-center justify-center px-[24px] py-[12px] rounded-[24px] shrink-0 hover:bg-[#D4FB20]/90 transition-colors">
-        <span className="text-brand-gray-950 text-[18px] font-medium leading-[1.2]">
+        <span className="text-brand-gray-950 text-lg font-medium leading-[1.2]">
           Search
         </span>
       </button>

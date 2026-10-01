@@ -26,26 +26,26 @@ export async function ProfessionalGrowth() {
 
           <div className="flex flex-wrap gap-8 md:gap-[56px] items-end mt-4">
             <div className="flex flex-col">
-              <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
+              <span className="font-heading font-semibold text-5xl text-brand-blue leading-[1.2] tracking-[-0.03rem]">
                 {metrics.studentsCount}
               </span>
-              <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
+              <span className="font-body font-normal text-base text-brand-text-secondary leading-[1.2] mt-1">
                 Students
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
+              <span className="font-heading font-semibold text-5xl text-brand-blue leading-[1.2] tracking-[-0.03rem]">
                 {metrics.coursesCount}
               </span>
-              <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
+              <span className="font-body font-normal text-base text-brand-text-secondary leading-[1.2] mt-1">
                 Courses
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
+              <span className="font-heading font-semibold text-5xl text-brand-blue leading-[1.2] tracking-[-0.03rem]">
                 {metrics.creatorsCount}
               </span>
-              <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
+              <span className="font-body font-normal text-base text-brand-text-secondary leading-[1.2] mt-1">
                 Creators
               </span>
             </div>

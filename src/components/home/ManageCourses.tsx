@@ -18,7 +18,8 @@ export function ManageCourses() {
               alt="Student learning"
               fill
               className="object-contain object-bottom pointer-events-none"
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
 
           {/* Floating Card: Total Revenue (Left edge) */}
@@ -44,14 +45,14 @@ export function ManageCourses() {
           {/* Floating Card: Happy Students (Bottom right) */}
           <div className="absolute left-[60%] md:left-[60%] top-[63%] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[200px] md:w-[258px]">
             <div className="flex flex-col">
-              <span className="font-body font-medium text-[16px] text-brand-gray-950 leading-[24px]">
+              <span className="font-body font-medium text-base text-brand-gray-950 leading-[1.5rem]">
                 Happy Students
               </span>
               <div className="flex items-center">
-                <span className="font-body font-bold text-brand-gray-950 text-[10px] leading-[1.5]">
+                <span className="font-body font-bold text-brand-gray-950 text-[0.625rem] leading-[1.5]">
                   4.5&nbsp;
                 </span>
-                <span className="font-body font-normal text-brand-gray-400 text-[10px] leading-[1.5]">
+                <span className="font-body font-normal text-brand-gray-400 text-[0.625rem] leading-[1.5]">
                   (240)
                 </span>
                 <div className="relative w-[16px] h-[16px] ml-1">
@@ -60,7 +61,8 @@ export function ManageCourses() {
                     alt="Star"
                     fill
                     className="object-contain"
-                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
               </div>
             </div>
@@ -75,8 +77,8 @@ export function ManageCourses() {
                 ASSETS.avatars.avatar6,
               ]}
               countText="2K+"
-              avatarClassName="w-[32px] h-[32px] md:w-[43px] md:h-[43px] border-[1.5px] border-white -mr-[16px] z-[1]"
-              badgeClassName="bg-brand-lime z-10 font-body font-bold text-[10px] md:text-[12px] text-brand-gray-950"
+              avatarClassName="w-[32px] h-[32px] md:w-[43px] md:h-[43px] -mr-[16px] z-[1]"
+              badgeClassName="bg-brand-lime z-10 font-body font-bold text-[0.625rem] md:text-xs text-brand-gray-950"
             />
           </div>
 
@@ -120,9 +122,10 @@ export function ManageCourses() {
                     alt="Check"
                     fill
                     className="object-contain"
-                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
                 </div>
-                <span className="font-body font-medium text-[16px] md:text-[18px] text-brand-gray-950 leading-[1.2]">
+                <span className="font-body font-medium text-base md:text-lg text-brand-gray-950 leading-[1.2]">
                   {feature}
                 </span>
               </div>

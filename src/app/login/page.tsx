@@ -12,10 +12,10 @@ export default function LoginPage() {
     >
       <div className="flex flex-col gap-[40px] items-center w-full">
         <div className="flex flex-col items-start w-full">
-          <p className="font-body font-normal text-[18px] text-brand-blue leading-[1.6]">
+          <p className="font-body font-normal text-lg text-brand-blue leading-[1.6]">
             Sign In
           </p>
-          <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] tracking-[-0.44px] break-words text-brand-gray-950">
+          <h2 className="font-heading font-semibold text-[2rem] md:text-[2.75rem] leading-[1.2] tracking-[-0.0275rem] break-words text-brand-gray-950">
             Welcome Back
           </h2>
         </div>
@@ -42,7 +42,7 @@ export default function LoginPage() {
         <SocialLogins />
       </div>
 
-      <div className="flex items-center justify-center gap-1 font-body font-normal text-[16px] leading-[1.6] mt-8">
+      <div className="flex items-center justify-center gap-1 font-body font-normal text-base leading-[1.6] mt-8">
         <span className="text-brand-text-tertiary">New user?</span>
         <Link href="/register" className="text-brand-blue hover:underline">
           Create an account

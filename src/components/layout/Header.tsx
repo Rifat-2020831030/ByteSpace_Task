@@ -11,7 +11,7 @@ export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
         <div className="relative w-[28.8px] h-[31.5px]">
           <Image src={ASSETS.icons.logo} alt="ByteSpace" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
-        <span className="font-logo font-bold text-brand-gray-50 text-[24px]">
+        <span className="font-logo font-bold text-brand-gray-50 text-2xl">
           ByteSpace
         </span>
       </Link>
@@ -22,7 +22,7 @@ export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
           <Link
             key={idx}
             href={link.href}
-            className={`font-body text-[16px] transition-colors ${
+            className={`font-body text-base transition-colors ${
               idx === 0 ? "font-medium" : "font-normal hover:text-white"
             }`}
           >
@@ -35,13 +35,13 @@ export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
       <div className="flex items-center gap-[24px] text-brand-gray-50">
         <Link
           href="/login"
-          className="font-body font-normal text-[16px] hidden sm:block hover:text-white transition-colors"
+          className="font-body font-normal text-base hidden sm:block hover:text-white transition-colors"
         >
           Sign In
         </Link>
         <Link
           href="/register"
-          className="font-body font-normal text-[16px] hidden sm:block hover:text-white transition-colors"
+          className="font-body font-normal text-base hidden sm:block hover:text-white transition-colors"
         >
           Join Us
         </Link>

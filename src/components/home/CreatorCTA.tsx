@@ -67,11 +67,11 @@ export function CreatorCTA() {
       </div>
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-24 py-20 md:py-[100px] flex flex-col items-center justify-center text-center">
-        <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-white max-w-[700px]">
+        <h2 className="font-heading font-semibold text-[2rem] md:text-[2.75rem] leading-[1.2] text-white max-w-[700px]">
           Unlock Your Potential as a Creator with ByteSpace
         </h2>
 
-        <p className="font-body font-normal text-[16px] md:text-[18px] leading-[1.6] text-brand-gray-50 max-w-[964px] mt-6 mb-10">
+        <p className="font-body font-normal text-base md:text-lg leading-[1.6] text-brand-gray-50 max-w-[964px] mt-6 mb-10">
           Experience the collaboration of numerous creators and an expanding
           selection of courses. Register now and become a part of a community
           comprising over 10,000 local and international creators. Utilize our

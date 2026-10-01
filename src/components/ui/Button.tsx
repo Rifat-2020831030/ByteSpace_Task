@@ -25,9 +25,9 @@ export function Button({
   };
 
   const sizes = {
-    sm: "h-[40px] px-[16px] text-[14px]",
-    md: "h-[44px] px-[20px] text-[16px]",
-    lg: "h-[52px] px-[24px] md:px-[32px] text-[16px] md:text-[18px]",
+    sm: "h-[40px] px-[16px] text-sm",
+    md: "h-[44px] px-[20px] text-base",
+    lg: "h-[52px] px-[24px] md:px-[32px] text-base md:text-lg",
   };
 
   const borderRadii = {
