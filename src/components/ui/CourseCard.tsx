@@ -34,7 +34,7 @@ export function CourseCard({
     <div
       className={`bg-white rounded-[24px] border border-brand-gray-200 p-4 flex flex-col ${
         isFloating
-          ? "shadow-[0_20px_40px_rgba(0,0,0,0.1)] w-[373px]"
+          ? "shadow-[0_20px_40px_rgba(0,0,0,0.1)] w-[373px] max-w-full"
           : "w-full gap-[16px] hover:shadow-xl transition-shadow cursor-pointer group"
       } ${className}`}
     >
@@ -52,17 +52,17 @@ export function CourseCard({
           }`}
         />
 
-        <div className="absolute inset-x-0 bottom-3 px-3 flex flex-wrap gap-[12px]">
-          <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[12px] py-[6px] rounded-[24px] text-[10px] md:text-[12px] font-body font-medium text-brand-text-tertiary">
+        <div className="absolute inset-x-0 bottom-3 px-2 xl:px-3 flex flex-nowrap items-center gap-1.5 xl:gap-[12px] overflow-hidden">
+          <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-2 py-1 xl:px-[12px] xl:py-[6px] rounded-[24px] text-[10px] xl:text-[12px] font-body font-medium text-brand-text-tertiary whitespace-nowrap shrink-0">
             {course.lessons} Lessons
           </div>
           {!isFloating && course.duration && (
-            <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[12px] py-[6px] rounded-[24px] text-[10px] md:text-[12px] font-body font-medium text-brand-text-tertiary">
+            <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-2 py-1 xl:px-[12px] xl:py-[6px] rounded-[24px] text-[10px] xl:text-[12px] font-body font-medium text-brand-text-tertiary whitespace-nowrap shrink-0">
               {course.duration}
             </div>
           )}
           {!isFloating && course.comments !== undefined && (
-            <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[12px] py-[6px] rounded-[24px] text-[10px] md:text-[12px] font-body font-medium text-brand-text-tertiary">
+            <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-2 py-1 xl:px-[12px] xl:py-[6px] rounded-[24px] text-[10px] xl:text-[12px] font-body font-medium text-brand-text-tertiary whitespace-nowrap shrink-0">
               {course.comments} Comments
             </div>
           )}
