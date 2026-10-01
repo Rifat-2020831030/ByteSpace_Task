@@ -4,8 +4,13 @@ import { CourseCard } from "../ui/CourseCard";
 import { LearningProgressCard } from "../ui/LearningProgressCard";
 import { SectionHeader } from "../ui/SectionHeader";
 import { TintedShape } from "../ui/TintedShape";
+import { PlatformService } from "@/services/platform.service";
+import { getCourseOfTheDay } from "@/services/course.service";
 
-export function ProfessionalGrowth() {
+export async function ProfessionalGrowth() {
+  const metrics = await PlatformService.getMetrics();
+  const featuredCourse = await getCourseOfTheDay();
+
   return (
     <section className="relative w-full py-16 md:py-32 flex justify-center overflow-hidden">
       <div className="relative z-10 max-w-[1440px] w-full px-4 sm:px-6 lg:px-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-[63px]">
@@ -22,7 +27,7 @@ export function ProfessionalGrowth() {
           <div className="flex flex-wrap gap-8 md:gap-[56px] items-end mt-4">
             <div className="flex flex-col">
               <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
-                12K
+                {metrics.studentsCount}
               </span>
               <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
                 Students
@@ -30,7 +35,7 @@ export function ProfessionalGrowth() {
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
-                70+
+                {metrics.coursesCount}
               </span>
               <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
                 Courses
@@ -38,7 +43,7 @@ export function ProfessionalGrowth() {
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-semibold text-[48px] text-brand-blue leading-[1.2] tracking-[-0.48px]">
-                16
+                {metrics.creatorsCount}
               </span>
               <span className="font-body font-normal text-[16px] text-brand-text-secondary leading-[1.2] mt-1">
                 Creators
@@ -63,14 +68,7 @@ export function ProfessionalGrowth() {
           <div className="absolute -left-4 md:-left-[50px] top-[20px] md:top-[120px] scale-[0.6] md:scale-[0.75] origin-top-left z-10 pointer-events-none opacity-80 md:opacity-100">
             <CourseCard
               variant="floating"
-              course={{
-                title: "Learn Figma from Basic",
-                author: "purepearl studio",
-                level: "Beginner",
-                price: "$25",
-                image: ASSETS.courses.course1,
-                lessons: 17,
-              }}
+              course={featuredCourse}
             />
           </div>
 

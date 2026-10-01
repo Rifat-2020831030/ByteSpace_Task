@@ -4,8 +4,11 @@ import { Header } from "../layout/Header";
 import { LearningProgressCard } from "../ui/LearningProgressCard";
 import { Button } from "../ui/Button";
 import { AvatarGroup } from "../ui/AvatarGroup";
+import { PlatformService } from "@/services/platform.service";
 
-export function Hero() {
+export async function Hero() {
+  const navLinks = await PlatformService.getNavLinks();
+
   return (
     <div className="relative w-full min-h-screen lg:min-h-[1024px] bg-brand-blue overflow-hidden flex flex-col items-center">
       {/* Background Grid */}
@@ -101,7 +104,7 @@ export function Hero() {
       {/* Actual Responsive UI Container */}
       <div className="w-full max-w-[1440px] z-20 flex flex-col items-center px-4 sm:px-6 lg:px-[122px] pt-6 lg:pt-[35px] h-full flex-1">
         {/* Header replaces old fixed nav */}
-        <Header />
+        <Header navLinks={navLinks} />
 
         {/* Text & Search */}
         <div className="flex flex-col items-center text-center w-full mt-12 md:mt-24 lg:mt-[94px] z-30">

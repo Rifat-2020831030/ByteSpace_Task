@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export function Header() {
+type NavLink = { label: string; href: string };
+
+export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -22,21 +24,17 @@ export function Header() {
 
       {/* Nav Links - Hidden on Mobile */}
       <nav className="hidden md:flex items-center gap-[24px] text-brand-gray-50">
-        <Link href="#" className="font-body font-medium text-[16px]">
-          Home
-        </Link>
-        <Link
-          href="#"
-          className="font-body font-normal text-[16px] hover:text-white transition-colors"
-        >
-          Courses
-        </Link>
-        <Link
-          href="#"
-          className="font-body font-normal text-[16px] hover:text-white transition-colors"
-        >
-          Creators
-        </Link>
+        {navLinks.map((link, idx) => (
+          <Link
+            key={idx}
+            href={link.href}
+            className={`font-body text-[16px] transition-colors ${
+              idx === 0 ? "font-medium" : "font-normal hover:text-white"
+            }`}
+          >
+            {link.label}
+          </Link>
+        ))}
       </nav>
 
       {/* Auth & Cart/Menu Button */}
@@ -85,15 +83,17 @@ export function Header() {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="absolute top-[60px] right-0 w-[200px] bg-white rounded-[16px] p-4 shadow-xl flex flex-col gap-4 md:hidden text-brand-gray-950 z-50 animate-in slide-in-from-top-2">
-          <Link href="#" className="font-body font-medium text-[16px]">
-            Home
-          </Link>
-          <Link href="#" className="font-body font-normal text-[16px]">
-            Courses
-          </Link>
-          <Link href="#" className="font-body font-normal text-[16px]">
-            Creators
-          </Link>
+          {navLinks.map((link, idx) => (
+            <Link
+              key={idx}
+              href={link.href}
+              className={`font-body text-[16px] ${
+                idx === 0 ? "font-medium" : "font-normal"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
           <hr className="border-gray-100" />
           <Link
             href="#"
