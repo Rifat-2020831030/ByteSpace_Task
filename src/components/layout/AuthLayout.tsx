@@ -82,6 +82,24 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
 
           {/* Graphics Container */}
           <div className="relative w-full h-[600px] mt-[65px] -ml-[25px]">
+            {/* 3D Shapes (Rendered first to stay behind cards) */}
+            <TintedShape
+              src={ASSETS.shapes.shape1}
+              color="bg-brand-gray-50"
+              className="w-[175px] h-[175px] left-[373px] top-[321px] z-0"
+              flip
+            />
+            <TintedShape
+              src={ASSETS.shapes.cone1}
+              color="bg-brand-lime"
+              className="w-[146px] h-[146px] left-[54px] top-[15px] z-0"
+            />
+            <TintedShape
+              src={ASSETS.shapes.cone2}
+              color="bg-brand-lime"
+              className="w-[188px] h-[188px] left-[0px] top-[397px] z-0"
+            />
+
             {/* Card 1 */}
             <div className="absolute left-[25px] top-[89px] z-10">
               <CourseCard course={course1} variant="floating" />
@@ -93,7 +111,7 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
             </div>
 
             {/* Happy Students */}
-            <div className="absolute left-[133px] top-[435px] z-30 backdrop-blur-[10px] bg-brand-lime p-[16px] rounded-[16px] w-[258px] flex flex-col gap-[8px]">
+            <div className="absolute left-[251px] top-[435px] z-30 backdrop-blur-[10px] bg-brand-lime p-[16px] rounded-[16px] w-[258px] flex flex-col gap-[8px]">
               <div className="flex flex-col text-brand-gray-950">
                 <span className="font-body font-medium text-[16px] leading-[1.5]">Happy Students</span>
                 <div className="flex items-center gap-1">
@@ -119,24 +137,6 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
                 badgeClassName="w-[43px] h-[43px] -ml-[16px] bg-brand-gray-200 text-brand-gray-50 text-[12px]"
               />
             </div>
-
-            {/* 3D Shapes */}
-            <TintedShape
-              src={ASSETS.shapes.shape1}
-              color="bg-brand-gray-50"
-              className="w-[175px] h-[175px] left-[373px] top-[321px]"
-              flip
-            />
-            <TintedShape
-              src={ASSETS.shapes.cone1}
-              color="bg-brand-lime"
-              className="w-[146px] h-[146px] left-[54px] top-[15px]"
-            />
-            <TintedShape
-              src={ASSETS.shapes.cone2}
-              color="bg-brand-lime"
-              className="w-[188px] h-[188px] left-[0px] top-[397px]"
-            />
           </div>
         </div>
 
