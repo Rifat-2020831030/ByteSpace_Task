@@ -1,13 +1,13 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
-import { TintedShape } from "../ui/TintedShape";
 import { AvatarGroup } from "../ui/AvatarGroup";
-import { SectionHeader } from "../ui/SectionHeader";
 import { MiniStatCard } from "../ui/MiniStatCard";
+import { SectionHeader } from "../ui/SectionHeader";
+import { TintedShape } from "../ui/TintedShape";
 
 export function ManageCourses() {
   return (
-    <section className="relative w-full py-16 md:py-32 flex justify-center overflow-hidden">
+    <section className="relative w-full pt-8 md:pt-[36px] pb-16 md:pb-32 flex justify-center overflow-hidden">
       <div className="relative z-10 max-w-[1440px] w-full px-4 sm:px-6 lg:px-24 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-[79px]">
         {/* Left Side: Image and Floating Cards */}
         <div className="relative w-full max-w-[541px] aspect-[541/596] shrink-0 mt-8 lg:mt-0">
@@ -18,7 +18,7 @@ export function ManageCourses() {
               alt="Student learning"
               fill
               className="object-contain object-bottom pointer-events-none"
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
 
           {/* Floating Card: Total Revenue (Left edge) */}
@@ -28,7 +28,7 @@ export function ManageCourses() {
             amount="$120.29"
             increase="+12$"
             progress={55}
-            className="absolute left-0 top-[20px] md:top-[44px] z-30 w-[200px] md:w-fit"
+            className="absolute left-0 sm:left-[13%] sm:top-[20%] z-10 w-[200px] md:w-[250px]"
           />
 
           {/* Floating Card: Year to Date (Left edge) */}
@@ -37,29 +37,31 @@ export function ManageCourses() {
             subtitle="2023"
             amount="$1,200.38"
             increase="+12$"
-            className="absolute left-0 top-[150px] md:top-[194px] z-30 w-[134px]"
+            progress={75}
+            className="absolute left-0 top-[40%] sm:left-[13%] sm:top-[45%] z-10 w-[150px] md:w-[134px]"
           />
 
           {/* Floating Card: Happy Students (Bottom right) */}
-          <div className="absolute right-0 md:left-[283px] bottom-0 md:top-[413px] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[258px]">
-            <span className="font-body font-medium text-[16px] text-brand-gray-950 leading-[24px]">
-              Happy Students
-            </span>
-
-            <div className="flex items-center gap-[4px] -mt-1 mb-1">
-              <span className="font-body font-bold text-brand-gray-950 text-[10px] leading-[1.5]">
-                4.5
+          <div className="absolute left-[60%] md:left-[60%] top-[63%] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[200px] md:w-[258px]">
+            <div className="flex flex-col">
+              <span className="font-body font-medium text-[16px] text-brand-gray-950 leading-[24px]">
+                Happy Students
               </span>
-              <span className="font-body font-normal text-brand-gray-400 text-[10px] leading-[1.5]">
-                (240)
-              </span>
-              <div className="relative w-[16px] h-[16px]">
-                <Image
-                  src={ASSETS.icons.star}
-                  alt="Star"
-                  fill
-                  className="object-contain"
-                />
+              <div className="flex items-center">
+                <span className="font-body font-bold text-brand-gray-950 text-[10px] leading-[1.5]">
+                  4.5&nbsp;
+                </span>
+                <span className="font-body font-normal text-brand-gray-400 text-[10px] leading-[1.5]">
+                  (240)
+                </span>
+                <div className="relative w-[16px] h-[16px] ml-1">
+                  <Image
+                    src={ASSETS.icons.star}
+                    alt="Star"
+                    fill
+                    className="object-contain"
+                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                </div>
               </div>
             </div>
 
@@ -73,16 +75,16 @@ export function ManageCourses() {
                 ASSETS.avatars.avatar6,
               ]}
               countText="2K+"
-              avatarClassName="w-[43px] h-[43px] border-[1.5px] border-white -mr-[16px] z-[1]"
-              badgeClassName="bg-brand-lime z-10 font-body font-bold text-[12px] text-brand-gray-950"
+              avatarClassName="w-[32px] h-[32px] md:w-[43px] md:h-[43px] border-[1.5px] border-white -mr-[16px] z-[1]"
+              badgeClassName="bg-brand-lime z-10 font-body font-bold text-[10px] md:text-[12px] text-brand-gray-950"
             />
           </div>
 
-          {/* 3D Shape (Swirl) - BEHIND the student, Electric Lime! */}
+          {/* 3D Shape (Swirl) */}
           <TintedShape
             src={ASSETS.growth.student2}
             color="bg-brand-lime"
-            className="right-[-5%] md:right-[0px] top-[10%] md:top-[120px] w-[150px] md:w-[215px] aspect-square z-10"
+            className="right-[-5%] md:right-[0px] top-[10%] md:top-[165px] w-[150px] md:w-[215px] aspect-square z-30 animate-float"
           />
         </div>
 
@@ -96,8 +98,8 @@ export function ManageCourses() {
                 <span className="font-body font-bold text-brand-gray-950">
                   ByteSpace
                 </span>{" "}
-                supports individuals or entities in the creation, publication, and
-                administration of educational courses.
+                supports individuals or entities in the creation, publication,
+                and administration of educational courses.
               </>
             }
             titleClassName="max-w-[391px]"
@@ -118,7 +120,7 @@ export function ManageCourses() {
                     alt="Check"
                     fill
                     className="object-contain"
-                  />
+                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <span className="font-body font-medium text-[16px] md:text-[18px] text-brand-gray-950 leading-[1.2]">
                   {feature}

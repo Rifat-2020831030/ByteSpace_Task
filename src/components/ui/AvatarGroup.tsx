@@ -30,7 +30,7 @@ export function AvatarGroup({
             fill
             className="object-cover"
             alt={`Avatar ${i + 1}`}
-          />
+           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
       ))}
       <div
@@ -42,7 +42,7 @@ export function AvatarGroup({
             fill
             className="object-cover -z-10 absolute inset-0"
             alt="Badge Background"
-          />
+           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         )}
         <span className="relative z-10">{countText}</span>
       </div>

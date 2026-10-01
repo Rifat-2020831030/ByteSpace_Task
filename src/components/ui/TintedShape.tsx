@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 export type TintedShapeProps = {
   src: string;
@@ -14,33 +13,27 @@ export function TintedShape({
   className = "",
   flip = false,
 }: TintedShapeProps) {
+  let filterClass = "";
+  if (color.includes("lime")) {
+    filterClass = "tint-electric-lime";
+  } else if (color.includes("gray-50") || color.includes("white")) {
+    filterClass = "tint-white";
+  } else {
+    filterClass = "tint-shuttle-gray";
+  }
+
   return (
     <div
       className={`absolute z-0 pointer-events-none ${className} ${
         flip ? "-scale-x-100" : ""
       }`}
     >
-      {/* Base Grayscale Image for 3D Shading */}
       <Image
         src={src}
         alt=""
         fill
-        className="object-contain pointer-events-none opacity-80"
-      />
-
-      {/* Color Overlay using Hard-Light blend mode to tint the 3D shape while preserving shadows */}
-      <div
-        className={`absolute inset-0 ${color} mix-blend-hard-light pointer-events-none`}
-        style={{
-          WebkitMaskImage: `url(${src})`,
-          WebkitMaskSize: "contain",
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskPosition: "center",
-          maskImage: `url(${src})`,
-          maskSize: "contain",
-          maskRepeat: "no-repeat",
-          maskPosition: "center",
-        }}
+        className={`object-contain pointer-events-none opacity-90 ${filterClass}`}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
   );

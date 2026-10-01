@@ -1,14 +1,14 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
-import { TintedShape } from "../ui/TintedShape";
 import { Button } from "../ui/Button";
+import { TintedShape } from "../ui/TintedShape";
 
 export function CreatorCTA() {
   return (
     <section className="relative w-full overflow-hidden bg-brand-blue">
       {/* Background Grid */}
       <div className="absolute inset-0 z-0 pointer-events-none flex justify-center opacity-30">
-        <Image src={ASSETS.cta.grid} alt="Grid" fill className="object-cover" />
+        <Image src={ASSETS.cta.grid} alt="Grid" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
 
       {/* Background Shapes */}
@@ -18,28 +18,28 @@ export function CreatorCTA() {
           <TintedShape
             src={ASSETS.cta.shape1}
             color="bg-brand-lime"
-            className="-translate-x-1/2 w-[188px] aspect-square left-1/2 ml-[454px] top-[0%]"
+            className="-translate-x-1/2 animate-float w-[188px] aspect-square left-1/2 ml-[454px] top-[0%]"
           />
 
           {/* 2. Bottom Right Shape */}
           <TintedShape
             src={ASSETS.cta.shape2}
             color="bg-brand-lime"
-            className="-translate-x-1/2 w-[330px] aspect-square left-1/2 ml-[555px] top-[60%]"
+            className="-translate-x-1/2 animate-float w-[330px] aspect-square left-1/2 ml-[555px] top-[60%]"
           />
 
           {/* 3. Top Left Shape */}
           <TintedShape
             src={ASSETS.cta.shape3}
             color="bg-brand-lime"
-            className="-translate-x-1/2 w-[385px] aspect-square left-1/2 -ml-[645px] top-[-33%]"
+            className="-translate-x-1/2 animate-float w-[385px] aspect-square left-1/2 -ml-[645px] top-[-33%]"
           />
 
           {/* 4. Top Center-Left Shape (flipped) */}
           <TintedShape
             src={ASSETS.cta.shape3}
             color="bg-brand-gray-50"
-            className="-translate-x-1/2 w-[175px] aspect-square left-1/2 -ml-[454px] top-[1%]"
+            className="-translate-x-1/2 animate-float w-[175px] aspect-square left-1/2 -ml-[454px] top-[1%]"
             flip
           />
 
@@ -47,21 +47,21 @@ export function CreatorCTA() {
           <TintedShape
             src={ASSETS.cta.shape4}
             color="bg-brand-gray-50"
-            className="-translate-x-1/2 w-[188px] aspect-square left-1/2 -ml-[674px] top-[46%]"
+            className="-translate-x-1/2 animate-float w-[188px] aspect-square left-[46.5%] -ml-[674px] top-[46%]"
           />
 
           {/* 6. Bottom Center-Left Cone */}
           <TintedShape
             src={ASSETS.cta.shape5}
             color="bg-brand-lime"
-            className="-translate-x-1/2 w-[342px] aspect-square left-1/2 -ml-[529px] top-[61%]"
+            className="-translate-x-1/2 animate-float w-[342px] aspect-square left-1/2 -ml-[529px] top-[61%]"
           />
 
           {/* 7. Far Right Center Cone */}
           <TintedShape
             src={ASSETS.cta.shape6}
             color="bg-brand-gray-50"
-            className="-translate-x-1/2 w-[370px] aspect-square left-1/2 ml-[691px] top-[1%]"
+            className="-translate-x-1/2 animate-float w-[370px] aspect-square left-1/2 ml-[691px] top-[1%]"
           />
         </div>
       </div>

@@ -6,6 +6,7 @@ import {
 import { SectionHeader } from "../ui/SectionHeader";
 import { Button } from "../ui/Button";
 import { CourseCard } from "../ui/CourseCard";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 export async function FeaturedCourses() {
   const filters = await getCourseFilters();
@@ -54,8 +55,10 @@ export async function FeaturedCourses() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] w-full">
-          {courses.map((course) => (
-            <CourseCard key={course.id} course={course} />
+          {courses.map((course, index) => (
+            <ScrollReveal key={course.id} delay={index * 150} animation="scale-up" className="flex">
+              <CourseCard course={course} />
+            </ScrollReveal>
           ))}
         </div>
       </div>

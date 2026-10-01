@@ -1,96 +1,67 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect } from "react";
+import { useState } from "react";
 
 export type NavLink = { label: string; href: string };
 
-type MobileMenuProps = {
-  isOpen: boolean;
-  onClose: () => void;
-  navLinks?: NavLink[];
-};
-
-export function MobileMenu({ isOpen, onClose, navLinks = [] }: MobileMenuProps) {
-  // Prevent scrolling when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
+export function MobileMenu({ navLinks = [] }: { navLinks?: NavLink[] }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div 
-      className={`fixed inset-0 z-[100] lg:hidden ${
-        isOpen ? "pointer-events-auto" : "pointer-events-none"
-      }`}
-    >
-      {/* Overlay */}
-      <div
-        className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0"
-        }`}
-        onClick={onClose}
-      />
-      
-      {/* Drawer */}
-      <div 
-        className={`absolute top-0 right-0 h-full w-[280px] bg-white shadow-2xl flex flex-col p-6 transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+    <>
+      <button
+        aria-label="Mobile Menu"
+        className="md:hidden relative w-[28px] h-[28px] flex items-center justify-center ml-2"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <div className="flex justify-end mb-6">
-          <button 
-            onClick={onClose} 
-            aria-label="Close Menu" 
-            className="p-2 -mr-2 text-brand-gray-950 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-        </div>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
 
-        <nav className="flex flex-col gap-6 text-brand-gray-950">
-          <Link href="/" className="font-body font-medium text-[18px]" onClick={onClose}>
-            Home
-          </Link>
-          
+      {isMenuOpen && (
+        <div className="absolute top-[60px] right-0 w-[200px] bg-white rounded-[16px] p-4 shadow-xl flex flex-col gap-4 md:hidden text-brand-gray-950 z-50 animate-in slide-in-from-top-2">
           {navLinks.map((link, idx) => (
             <Link
               key={idx}
               href={link.href}
-              className="font-body font-medium text-[18px]"
-              onClick={onClose}
+              className={`font-body text-[16px] ${
+                idx === 0 ? "font-medium" : "font-normal"
+              }`}
+              onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
             </Link>
           ))}
-          
-          <hr className="border-gray-200 my-2" />
-          
+          <hr className="border-gray-100" />
           <Link
             href="/login"
-            className="font-body font-medium text-[18px]"
-            onClick={onClose}
+            className="font-body font-normal text-[16px] sm:hidden"
+            onClick={() => setIsMenuOpen(false)}
           >
             Sign In
           </Link>
           <Link
             href="/register"
-            className="font-body font-medium text-[18px] text-brand-blue"
-            onClick={onClose}
+            className="font-body font-normal text-[16px] sm:hidden"
+            onClick={() => setIsMenuOpen(false)}
           >
             Join Us
           </Link>
-        </nav>
-      </div>
-    </div>
+        </div>
+      )}
+    </>
   );
 }

@@ -47,8 +47,6 @@ export function AuthLayout({
     students: 26,
   };
 
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
   return (
     <div className="bg-brand-blue relative min-h-screen w-full overflow-hidden flex justify-center">
       {/* Background Grid */}
@@ -76,33 +74,8 @@ export function AuthLayout({
           </Link>
 
           {/* Mobile Hamburger Menu Icon */}
-          <button
-            aria-label="Mobile Menu"
-            className="lg:hidden relative w-[28px] h-[28px] flex items-center justify-center text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
+          <MobileMenu />
         </div>
-
-        {/* Mobile Menu Drawer */}
-        <MobileMenu
-          isOpen={isMenuOpen}
-          onClose={() => setIsMenuOpen(false)}
-        />
 
         {/* Left Side (Hidden on smaller screens, shown on lg) */}
         <div className="hidden lg:flex flex-col relative w-full h-full">
