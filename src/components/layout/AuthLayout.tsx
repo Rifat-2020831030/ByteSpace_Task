@@ -62,9 +62,9 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
             <div className="relative w-[28.8px] h-[31.5px]">
               <Image src={ASSETS.icons.logo} alt="ByteSpace" fill />
             </div>
-            <span className="font-logo font-bold text-white text-[24px]">
+            {/* <span className="font-logo font-bold text-white text-[24px]">
               ByteSpace
-            </span>
+            </span> */}
           </Link>
         </div>
 
