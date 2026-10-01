@@ -8,7 +8,7 @@ export function CreatorCTA() {
     <section className="relative w-full overflow-hidden bg-brand-blue">
       {/* Background Grid */}
       <div className="absolute inset-0 z-0 pointer-events-none flex justify-center opacity-30">
-        <Image src={ASSETS.cta.grid} alt="Grid" fill className="object-cover" />
+        <Image src={ASSETS.cta.grid} alt="Grid" fill className="object-cover"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
 
       {/* Background Shapes */}

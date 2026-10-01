@@ -19,7 +19,7 @@ export async function Hero() {
           src={ASSETS.hero.gridBg}
           fill
           priority
-        />
+         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
 
       {/* Fixed 1440x1024 Absolute Background Layer for 3D Shapes & Glow */}
@@ -33,7 +33,7 @@ export async function Hero() {
             src={ASSETS.hero.ellipseBg}
             fill
             priority
-          />
+           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
 
         {/* 3D Decorative Ornaments */}
@@ -44,7 +44,7 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-shuttle-gray"
               src={ASSETS.shapes.shape1}
               fill
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute bottom-[40.82%] left-[calc(50%-645.5px)] top-[21.58%] w-[385px]">
@@ -54,7 +54,7 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-electric-lime"
               src={ASSETS.shapes.shape2}
               fill
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute bottom-[36.33%] flex items-center justify-center left-[calc(50%-449.5px)] top-[46.58%] w-[175px]">
@@ -65,7 +65,7 @@ export async function Hero() {
                 className="absolute inset-0 max-w-none object-cover pointer-events-none size-full scale-x-[-1] tint-shuttle-gray"
                 src={ASSETS.shapes.shape2}
                 fill
-              />
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-shuttle-gray"
               src={ASSETS.shapes.cone1}
               fill
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute bottom-[42.29%] left-[calc(50%+696px)] top-[21.58%] w-[370px]">
@@ -86,7 +86,7 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-electric-lime"
               src={ASSETS.shapes.cone2}
               fill
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
         <div className="-translate-x-1/2 absolute bottom-[36.33%] left-[calc(50%+480px)] top-[45.31%] w-[188px]">
@@ -96,7 +96,7 @@ export async function Hero() {
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full tint-shuttle-gray"
               src={ASSETS.shapes.cone3}
               fill
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@ export async function Hero() {
           <div className="mt-8 md:mt-[60px] flex flex-col sm:flex-row gap-4 items-start w-full max-w-[620px]">
             <div className="flex-1 bg-white rounded-full flex items-center px-6 py-[12px] w-full h-[52px]">
               <div className="w-[24px] h-[24px] relative shrink-0">
-                <Image src={ASSETS.icons.search} alt="Search" fill />
+                <Image src={ASSETS.icons.search} alt="Search" fill  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
               <input
                 type="text"
@@ -143,7 +143,7 @@ export async function Hero() {
             fill
             className="object-cover object-bottom"
             priority
-          />
+           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 
           {/* Floating Card: UI/UX Design (Left) */}
           <div className="absolute left-[0%] sm:left-[-4.6%] top-[23.4%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col w-[max-content] hover:-translate-y-1 transition-transform origin-top-left scale-75 sm:scale-100">
@@ -177,7 +177,7 @@ export async function Hero() {
                 (240)
               </span>
               <div className="relative w-[16px] h-[16px] ml-1">
-                <Image src={ASSETS.icons.star} fill alt="star" />
+                <Image src={ASSETS.icons.star} fill alt="star"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
               </div>
             </div>
             <AvatarGroup

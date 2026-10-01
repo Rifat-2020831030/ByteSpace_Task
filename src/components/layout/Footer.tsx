@@ -31,7 +31,7 @@ export async function Footer() {
             <div className="flex flex-col gap-[16px]">
               <Link href="/" className="flex items-center gap-[8.13px]">
                 <div className="relative w-[28.875px] h-[31.5px]">
-                  <Image src={ASSETS.icons.logoDark} alt="ByteSpace" fill />
+                  <Image src={ASSETS.icons.logoDark} alt="ByteSpace" fill  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <span className="font-logo font-bold text-brand-gray-950 text-[24px]">
                   ByteSpace

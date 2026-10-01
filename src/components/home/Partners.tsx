@@ -9,7 +9,7 @@ export async function Partners() {
       <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
         {partners.map((logo, i) => (
           <div key={i} className="relative h-8 md:h-10 w-24 md:w-32 lg:w-40 hover:scale-105 transition-transform duration-300">
-            <Image src={logo} alt={`Partner ${i + 1}`} fill className="object-contain" />
+            <Image src={logo} alt={`Partner ${i + 1}`} fill className="object-contain"  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         ))}
       </div>
