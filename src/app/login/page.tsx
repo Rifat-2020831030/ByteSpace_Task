@@ -33,7 +33,7 @@ export default function LoginPage() {
             type="password" 
           />
           
-          <Button variant="primary" size="lg" rounded="24px" className="w-full mt-2" type="button">
+          <Button variant="primary" size="lg" rounded="24px" className="mt-2" type="button">
             Sign In
           </Button>
         </form>
