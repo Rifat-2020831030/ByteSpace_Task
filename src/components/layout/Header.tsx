@@ -4,6 +4,7 @@ import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { MobileMenu } from "./MobileMenu";
 
 type NavLink = { label: string; href: string };
 
@@ -80,35 +81,12 @@ export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      {isMenuOpen && (
-        <div className="absolute top-[60px] right-0 w-[200px] bg-white rounded-[16px] p-4 shadow-xl flex flex-col gap-4 md:hidden text-brand-gray-950 z-50 animate-in slide-in-from-top-2">
-          {navLinks.map((link, idx) => (
-            <Link
-              key={idx}
-              href={link.href}
-              className={`font-body text-[16px] ${
-                idx === 0 ? "font-medium" : "font-normal"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <hr className="border-gray-100" />
-          <Link
-            href="#"
-            className="font-body font-normal text-[16px] sm:hidden"
-          >
-            Sign In
-          </Link>
-          <Link
-            href="#"
-            className="font-body font-normal text-[16px] sm:hidden"
-          >
-            Join Us
-          </Link>
-        </div>
-      )}
+      {/* Mobile Menu Drawer */}
+      <MobileMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        navLinks={navLinks}
+      />
     </header>
   );
 }

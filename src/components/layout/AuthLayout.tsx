@@ -7,6 +7,7 @@ import React from "react";
 import { CourseCard } from "../ui/CourseCard";
 import { AvatarGroup } from "../ui/AvatarGroup";
 import { TintedShape } from "../ui/TintedShape";
+import { MobileMenu } from "./MobileMenu";
 
 export type AuthLayoutProps = {
   leftTitle: string;
@@ -94,20 +95,11 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
           </button>
         </div>
 
-        {/* Mobile Dropdown Menu */}
-        {isMenuOpen && (
-          <div className="absolute top-[80px] right-6 w-[200px] bg-white rounded-[16px] p-4 shadow-xl flex flex-col gap-4 lg:hidden text-brand-gray-950 z-50 animate-in slide-in-from-top-2">
-            <Link href="/" className="font-body font-medium text-[16px]">
-              Home
-            </Link>
-            <Link href="/login" className="font-body font-normal text-[16px]">
-              Sign In
-            </Link>
-            <Link href="/register" className="font-body font-normal text-[16px]">
-              Create an Account
-            </Link>
-          </div>
-        )}
+        {/* Mobile Menu Drawer */}
+        <MobileMenu
+          isOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+        />
 
         {/* Left Side (Hidden on smaller screens, shown on lg) */}
         <div className="hidden lg:flex flex-col relative w-full h-full">
