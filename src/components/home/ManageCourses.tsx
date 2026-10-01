@@ -1,5 +1,9 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
+import { TintedShape } from "../ui/TintedShape";
+import { AvatarGroup } from "../ui/AvatarGroup";
+import { SectionHeader } from "../ui/SectionHeader";
+import { MiniStatCard } from "../ui/MiniStatCard";
 
 export function ManageCourses() {
   return (
@@ -18,49 +22,23 @@ export function ManageCourses() {
           </div>
 
           {/* Floating Card: Total Revenue (Left edge) */}
-          <div className="absolute left-0 top-[20px] md:top-[44px] bg-brand-blue backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-lg flex flex-col gap-[8px] z-30 w-[200px] md:w-fit">
-            <div className="flex flex-col text-brand-gray-50">
-              <span className="font-body font-medium text-[16px] leading-[1.2]">
-                Total Revenue
-              </span>
-              <span className="font-body font-normal text-[10px] leading-[1.2]">
-                July 1-28
-              </span>
-            </div>
-            <div className="flex items-center justify-between gap-[16px]">
-              <span className="font-heading font-semibold text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
-                $120.29
-              </span>
-              <div className="bg-brand-lime-alt px-[8px] py-[2px] rounded-[24px]">
-                <span className="font-body font-medium text-[10px] text-brand-gray-950">
-                  +12$
-                </span>
-              </div>
-            </div>
-            <div className="w-full md:w-[200px] h-[8px] bg-white rounded-[24px] overflow-hidden mt-2 relative">
-              <div className="absolute left-0 top-0 h-full bg-brand-lime w-[55%] rounded-[24px]"></div>
-            </div>
-          </div>
+          <MiniStatCard
+            title="Total Revenue"
+            subtitle="July 1-28"
+            amount="$120.29"
+            increase="+12$"
+            progress={55}
+            className="absolute left-0 top-[20px] md:top-[44px] z-30 w-[200px] md:w-fit"
+          />
 
           {/* Floating Card: Year to Date (Left edge) */}
-          <div className="absolute left-0 top-[150px] md:top-[194px] bg-brand-blue backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-lg flex flex-col gap-[8px] z-30 w-[134px]">
-            <div className="flex flex-col text-brand-gray-50">
-              <span className="font-body font-medium text-[16px] leading-[1.2]">
-                Year to Date
-              </span>
-              <span className="font-body font-normal text-[10px] leading-[1.2]">
-                2023
-              </span>
-            </div>
-            <span className="font-heading font-semibold text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
-              $1,200.38
-            </span>
-            <div className="bg-brand-lime-alt px-[8px] py-[2px] rounded-[24px] w-fit">
-              <span className="font-body font-medium text-[10px] text-brand-gray-950">
-                +12$
-              </span>
-            </div>
-          </div>
+          <MiniStatCard
+            title="Year to Date"
+            subtitle="2023"
+            amount="$1,200.38"
+            increase="+12$"
+            className="absolute left-0 top-[150px] md:top-[194px] z-30 w-[134px]"
+          />
 
           {/* Floating Card: Happy Students (Bottom right) */}
           <div className="absolute right-0 md:left-[283px] bottom-0 md:top-[413px] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[258px]">
@@ -85,68 +63,46 @@ export function ManageCourses() {
               </div>
             </div>
 
-            <div className="flex items-center">
-              {[
+            <AvatarGroup
+              avatars={[
                 ASSETS.avatars.avatar1,
                 ASSETS.avatars.avatar2,
                 ASSETS.avatars.avatar3,
                 ASSETS.avatars.avatar4,
                 ASSETS.avatars.avatar5,
                 ASSETS.avatars.avatar6,
-              ].map((avatar, i) => (
-                <div
-                  key={i}
-                  className="relative w-[43px] h-[43px] rounded-full border-[1.5px] border-white -mr-[16px] overflow-hidden shrink-0 z-[1]"
-                >
-                  <Image src={avatar} fill className="object-cover" alt="" />
-                </div>
-              ))}
-              <div className="relative w-[43px] h-[43px] rounded-full border-[1.5px] border-white bg-brand-lime flex items-center justify-center shrink-0 z-10">
-                <span className="font-body font-bold text-[12px] text-brand-gray-950">
-                  2K+
-                </span>
-              </div>
-            </div>
+              ]}
+              countText="2K+"
+              avatarClassName="w-[43px] h-[43px] border-[1.5px] border-white -mr-[16px] z-[1]"
+              badgeClassName="bg-brand-lime z-10 font-body font-bold text-[12px] text-brand-gray-950"
+            />
           </div>
 
           {/* 3D Shape (Swirl) - BEHIND the student, Electric Lime! */}
-          <div className="absolute right-[-5%] md:right-[0px] top-[10%] md:top-[120px] w-[150px] md:w-[215px] aspect-square z-10 pointer-events-none">
-            <Image
-              src={ASSETS.growth.student2}
-              alt=""
-              fill
-              className="object-contain pointer-events-none"
-            />
-            <div
-              className="absolute inset-0 bg-brand-lime mix-blend-hard-light pointer-events-none"
-              style={{
-                WebkitMaskImage: `url(${ASSETS.growth.student2})`,
-                WebkitMaskSize: "contain",
-                WebkitMaskRepeat: "no-repeat",
-                WebkitMaskPosition: "center",
-                maskImage: `url(${ASSETS.growth.student2})`,
-                maskSize: "contain",
-                maskRepeat: "no-repeat",
-                maskPosition: "center",
-              }}
-            />
-          </div>
+          <TintedShape
+            src={ASSETS.growth.student2}
+            color="bg-brand-lime"
+            className="right-[-5%] md:right-[0px] top-[10%] md:top-[120px] w-[150px] md:w-[215px] aspect-square z-10"
+          />
         </div>
 
         {/* Right Side: Text and Features */}
         <div className="flex flex-col gap-[40px] lg:w-[580px] shrink-0">
-          <div className="flex flex-col gap-6">
-            <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-brand-gray-950 tracking-[-0.44px] max-w-[391px]">
-              Create & Manage Courses Easily.
-            </h2>
-            <p className="font-body font-normal text-[16px] md:text-[18px] leading-[1.6] text-brand-text-secondary max-w-[574px]">
-              <span className="font-body font-bold text-brand-gray-950">
-                ByteSpace
-              </span>{" "}
-              supports individuals or entities in the creation, publication, and
-              administration of educational courses.
-            </p>
-          </div>
+          <SectionHeader
+            align="left"
+            title="Create & Manage Courses Easily."
+            description={
+              <>
+                <span className="font-body font-bold text-brand-gray-950">
+                  ByteSpace
+                </span>{" "}
+                supports individuals or entities in the creation, publication, and
+                administration of educational courses.
+              </>
+            }
+            titleClassName="max-w-[391px]"
+            descriptionClassName="max-w-[574px]"
+          />
 
           <div className="flex flex-col gap-[16px]">
             {[
