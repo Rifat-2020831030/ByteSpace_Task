@@ -1,9 +1,9 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
-import { TintedShape } from "../ui/TintedShape";
 import { AvatarGroup } from "../ui/AvatarGroup";
-import { SectionHeader } from "../ui/SectionHeader";
 import { MiniStatCard } from "../ui/MiniStatCard";
+import { SectionHeader } from "../ui/SectionHeader";
+import { TintedShape } from "../ui/TintedShape";
 
 export function ManageCourses() {
   return (
@@ -82,7 +82,7 @@ export function ManageCourses() {
           <TintedShape
             src={ASSETS.growth.student2}
             color="bg-brand-lime"
-            className="right-[-5%] md:right-[0px] top-[10%] md:top-[120px] w-[150px] md:w-[215px] aspect-square z-10"
+            className="right-[-5%] md:right-[0px] top-[10%] md:top-[120px] w-[150px] md:w-[215px] aspect-square z-30"
           />
         </div>
 
@@ -96,8 +96,8 @@ export function ManageCourses() {
                 <span className="font-body font-bold text-brand-gray-950">
                   ByteSpace
                 </span>{" "}
-                supports individuals or entities in the creation, publication, and
-                administration of educational courses.
+                supports individuals or entities in the creation, publication,
+                and administration of educational courses.
               </>
             }
             titleClassName="max-w-[391px]"
