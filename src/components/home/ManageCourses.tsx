@@ -28,7 +28,7 @@ export function ManageCourses() {
             amount="$120.29"
             increase="+12$"
             progress={55}
-            className="absolute left-[13%] top-[20%] z-10 w-[150px] md:w-[250px]"
+            className="absolute left-0 sm:left-[13%] sm:top-[20%] z-10 w-[200px] md:w-[250px]"
           />
 
           {/* Floating Card: Year to Date (Left edge) */}
@@ -37,11 +37,12 @@ export function ManageCourses() {
             subtitle="2023"
             amount="$1,200.38"
             increase="+12$"
-            className="absolute left-[13%] top-[45%] z-10 w-[120px] md:w-[134px]"
+            progress={75}
+            className="absolute left-0 top-[40%] sm:left-[13%] sm:top-[45%] z-10 w-[150px] md:w-[134px]"
           />
 
           {/* Floating Card: Happy Students (Bottom right) */}
-          <div className="absolute left-[30%] md:left-[60%] top-[63%] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[200px] md:w-[258px]">
+          <div className="absolute left-[60%] md:left-[60%] top-[63%] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[200px] md:w-[258px]">
             <div className="flex flex-col">
               <span className="font-body font-medium text-[16px] text-brand-gray-950 leading-[24px]">
                 Happy Students

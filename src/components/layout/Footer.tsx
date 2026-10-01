@@ -1,10 +1,16 @@
 import { ASSETS } from "@/lib/assets";
+import { FooterService } from "@/services/footer.service";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
-import { FooterService } from "@/services/footer.service";
 
-const FooterLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
+const FooterLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
   <Link
     href={href}
     className="font-body font-normal text-[14px] leading-[1.6] text-brand-gray-950 hover:text-brand-blue transition-colors"
