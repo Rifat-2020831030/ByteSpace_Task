@@ -24,23 +24,31 @@ export function MobileMenu({ isOpen, onClose, navLinks = [] }: MobileMenuProps) 
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-[100] lg:hidden">
+    <div 
+      className={`fixed inset-0 z-[100] lg:hidden ${
+        isOpen ? "pointer-events-auto" : "pointer-events-none"
+      }`}
+    >
       {/* Overlay */}
       <div
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-in fade-in duration-300"
+        className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
+          isOpen ? "opacity-100" : "opacity-0"
+        }`}
         onClick={onClose}
       />
       
       {/* Drawer */}
-      <div className="absolute top-0 right-0 h-full w-[280px] bg-white shadow-2xl flex flex-col p-6 animate-in slide-in-from-right duration-300">
+      <div 
+        className={`absolute top-0 right-0 h-full w-[280px] bg-white shadow-2xl flex flex-col p-6 transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="flex justify-end mb-6">
           <button 
             onClick={onClose} 
             aria-label="Close Menu" 
-            className="p-2 -mr-2 text-brand-gray-950 hover:bg-gray-100 rounded-full transition-colors"
+            className="p-2 -mr-2 text-brand-gray-950 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
