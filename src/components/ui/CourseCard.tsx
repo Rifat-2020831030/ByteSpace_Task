@@ -51,7 +51,8 @@ export function CourseCard({
               ? ""
               : "group-hover:scale-105 transition-transform duration-500"
           }`}
-         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
 
         <div className="absolute inset-x-0 bottom-[3.5cqw] px-[3.5cqw] flex flex-nowrap items-center gap-[3.5cqw]">
           <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[3.5cqw] py-[1.75cqw] rounded-[7cqw] text-[3.5cqw] font-body font-medium text-brand-text-tertiary whitespace-nowrap shrink-0">
@@ -80,19 +81,19 @@ export function CourseCard({
             className={`flex flex-col gap-[4px] ${isFloating ? "" : "pr-2"}`}
           >
             <h3
-              className={`font-heading font-semibold text-[20px] text-black leading-[1.2] ${
-                isFloating ? "" : "tracking-[-0.2px] break-words"
+              className={`font-heading font-semibold text-xl text-black leading-[1.2] ${
+                isFloating ? "" : "tracking-[-0.0125rem] break-words"
               }`}
             >
               {course.title}
             </h3>
-            <p className="font-body font-normal text-[12px] text-brand-text-tertiary">
+            <p className="font-body font-normal text-xs text-brand-text-tertiary">
               by <span className="text-brand-blue">{course.author}</span>
             </p>
           </div>
           {!isFloating && course.rating !== undefined && (
             <div className="flex items-center shrink-0">
-              <span className="font-body font-normal text-[18px] text-brand-text-tertiary leading-[1.6]">
+              <span className="font-body font-normal text-lg text-brand-text-tertiary leading-[1.6]">
                 {course.rating}&nbsp;
               </span>
               <svg
@@ -131,7 +132,7 @@ export function CourseCard({
                 <path d="M18 20v-14"></path>
               </svg>
             )}
-            <span className="font-body font-medium text-[12px] text-brand-text-secondary">
+            <span className="font-body font-medium text-xs text-brand-text-secondary">
               {course.level}
             </span>
           </div>
@@ -145,21 +146,21 @@ export function CourseCard({
                 ASSETS.avatars.avatar4,
               ]}
               countText={`${course.students}+`}
-              avatarClassName="w-[32px] h-[32px] border-2 border-white -ml-2 first:ml-0"
-              badgeClassName="bg-brand-lime font-body font-medium text-[12px] text-brand-gray-950 pt-[2px]"
+              avatarClassName="w-[32px] h-[32px] -ml-2 first:ml-0"
+              badgeClassName="bg-brand-lime font-body font-medium text-xs text-brand-gray-950 pt-[2px]"
             />
           )}
         </div>
 
         <div className="flex items-end mt-auto h-[24px]">
           <span
-            className={`font-heading font-semibold text-[20px] text-brand-blue leading-[1.2] ${
-              isFloating ? "" : "tracking-[-0.2px]"
+            className={`font-heading font-semibold text-xl text-brand-blue leading-[1.2] ${
+              isFloating ? "" : "tracking-[-0.0125rem]"
             }`}
           >
             {course.price}
           </span>
-          <span className="font-body font-normal text-[12px] text-brand-text-tertiary leading-[1.6] pl-[4px]">
+          <span className="font-body font-normal text-xs text-brand-text-tertiary leading-[1.6] pl-[4px]">
             /lifetime
           </span>
         </div>

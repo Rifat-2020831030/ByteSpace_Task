@@ -28,7 +28,7 @@ export function CategoryCard({ category, className = "" }: CategoryCardProps) {
              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
-        <h3 className="font-body font-medium text-brand-gray-950 text-[20px] leading-[1.2] text-center">
+        <h3 className="font-body font-medium text-brand-gray-950 text-xl leading-[1.2] text-center">
           {category.title}
         </h3>
       </div>

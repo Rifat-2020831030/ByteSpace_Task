@@ -20,32 +20,32 @@ export function MiniStatCard({
       className={`bg-brand-blue backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-lg flex flex-col gap-[8px] ${className}`}
     >
       <div className="flex flex-col text-brand-gray-50">
-        <span className="font-body font-medium text-[16px] leading-[1.2]">
+        <span className="font-body font-medium text-base leading-[1.2]">
           {title}
         </span>
-        <span className="font-body font-normal text-[10px] leading-[1.2]">
+        <span className="font-body font-normal text-[0.625rem] leading-[1.2]">
           {subtitle}
         </span>
       </div>
 
       {progress !== undefined ? (
         <div className="flex items-center justify-between gap-[16px]">
-          <span className="font-heading font-semibold text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
+          <span className="font-heading font-semibold text-2xl text-brand-gray-50 leading-[2rem] tracking-[-0.015rem]">
             {amount}
           </span>
           <div className="bg-brand-lime-alt px-[8px] py-[2px] rounded-[24px]">
-            <span className="font-body font-medium text-[10px] text-brand-gray-950">
+            <span className="font-body font-medium text-[0.625rem] text-brand-gray-950">
               {increase}
             </span>
           </div>
         </div>
       ) : (
         <>
-          <span className="font-heading font-semibold text-[16px] sm:text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
+          <span className="font-heading font-semibold text-base sm:text-2xl text-brand-gray-50 leading-[2rem] tracking-[-0.015rem]">
             {amount}
           </span>
           <div className="bg-brand-lime-alt px-[8px] py-[2px] rounded-[24px] w-fit">
-            <span className="font-body font-medium text-[10px] text-brand-gray-950">
+            <span className="font-body font-medium text-[0.625rem] text-brand-gray-950">
               {increase}
             </span>
           </div>

@@ -1,11 +1,11 @@
 export function LearningProgressCard() {
   return (
     <div className="absolute backdrop-blur-[10px] bg-white flex flex-col gap-[8px] items-start p-[16px] rounded-[16px]">
-      <p className="font-medium text-brand-gray-950 text-[14px] leading-[1.2]">
+      <p className="font-medium text-brand-gray-950 text-sm leading-[1.2]">
         Learning Progress
       </p>
       <div className="flex flex-col items-start w-[200px]">
-        <p className="font-semibold text-brand-gray-950 text-[48px] tracking-[-0.48px] leading-[1.2]">
+        <p className="font-semibold text-brand-gray-950 text-5xl tracking-[-0.03rem] leading-[1.2]">
           55%
         </p>
       </div>
@@ -21,11 +21,11 @@ export function HappyStudentsCard() {
   return (
     <div className="absolute backdrop-blur-[10px] bg-white flex flex-col gap-[8px] items-start justify-center p-[16px] rounded-[16px] w-[258px]">
       <div className="flex flex-col items-start">
-        <p className="font-medium text-brand-gray-950 text-[16px] leading-[1.2]">
+        <p className="font-medium text-brand-gray-950 text-base leading-[1.2]">
           Happy Students
         </p>
         <div className="flex items-center gap-1">
-          <p className="text-[12px] leading-[1.6]">
+          <p className="text-xs leading-[1.6]">
             <span className="text-brand-gray-950">4.5 </span>
             <span className="text-brand-gray-400">(240)</span>
           </p>
@@ -48,7 +48,7 @@ export function HappyStudentsCard() {
           />
         ))}
         <div className="w-[43px] h-[43px] rounded-full bg-[#f6f6f6] border-2 border-white flex items-center justify-center ml-[16px] z-10">
-          <p className="font-bold text-brand-gray-950 text-[12px] leading-[1.5]">
+          <p className="font-bold text-brand-gray-950 text-xs leading-[1.5]">
             2K+
           </p>
         </div>
@@ -60,13 +60,13 @@ export function HappyStudentsCard() {
 export function UiUxDesignCard() {
   return (
     <div className="absolute backdrop-blur-[10px] bg-white flex flex-col items-start justify-center p-[16px] rounded-[16px]">
-      <p className="font-medium text-brand-gray-950 text-[16px] leading-[1.2]">
+      <p className="font-medium text-brand-gray-950 text-base leading-[1.2]">
         UI/UX Design
       </p>
       <div className="flex items-center gap-[8px] text-brand-gray-400 mt-1">
-        <p className="text-[12px] leading-[1.6]">200 Courses</p>
-        <p className="text-[10px] leading-[1.5]">•</p>
-        <p className="text-[12px] leading-[1.6]">1000+ Students</p>
+        <p className="text-xs leading-[1.6]">200 Courses</p>
+        <p className="text-[0.625rem] leading-[1.5]">•</p>
+        <p className="text-xs leading-[1.6]">1000+ Students</p>
       </div>
     </div>
   );

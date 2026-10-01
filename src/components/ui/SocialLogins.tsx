@@ -3,7 +3,7 @@ export function SocialLogins() {
     <div className="flex flex-col gap-[40px] items-center w-full">
       <div className="flex items-center gap-[11px] w-full max-w-[453px]">
         <div className="flex-1 h-[1px] bg-[#d1d1d1]" />
-        <span className="font-body font-normal text-[18px] text-brand-text-tertiary leading-[1.6]">
+        <span className="font-body font-normal text-lg text-brand-text-tertiary leading-[1.6]">
           or
         </span>
         <div className="flex-1 h-[1px] bg-[#d1d1d1]" />

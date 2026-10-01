@@ -70,7 +70,7 @@ export function MobileMenu({
         }`}
       >
         <div className="flex justify-between items-center p-6 border-b border-gray-100">
-          <span className="font-heading font-semibold text-[20px] text-brand-gray-950">
+          <span className="font-heading font-semibold text-xl text-brand-gray-950">
             Menu
           </span>
           <button
@@ -99,7 +99,7 @@ export function MobileMenu({
             <Link
               key={idx}
               href={link.href}
-              className={`font-body text-[18px] text-brand-gray-950 hover:text-brand-blue transition-colors ${
+              className={`font-body text-lg text-brand-gray-950 hover:text-brand-blue transition-colors ${
                 idx === 0 ? "font-medium" : "font-normal"
               }`}
               onClick={() => setIsMenuOpen(false)}
@@ -112,14 +112,14 @@ export function MobileMenu({
 
           <Link
             href="/login"
-            className="font-body font-medium text-[18px] text-brand-gray-950 sm:hidden hover:text-brand-blue transition-colors"
+            className="font-body font-medium text-lg text-brand-gray-950 sm:hidden hover:text-brand-blue transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             Sign In
           </Link>
           <Link
             href="/register"
-            className="font-body font-medium text-[18px] text-brand-gray-950 sm:hidden hover:text-brand-blue transition-colors"
+            className="font-body font-medium text-lg text-brand-gray-950 sm:hidden hover:text-brand-blue transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
             Join Us
