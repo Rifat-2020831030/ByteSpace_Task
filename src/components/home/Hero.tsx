@@ -37,7 +37,7 @@ export async function Hero() {
         </div>
 
         {/* 3D Decorative Ornaments */}
-        <div className="-translate-x-1/2 absolute bottom-[2.15%] left-[calc(50%+572px)] top-[65.63%] w-[330px]">
+        <div className="-translate-x-1/2 absolute animate-float bottom-[2.15%] left-[calc(50%+572px)] top-[65.63%] w-[330px]">
           <div className="absolute inset-[0_0.47%_-0.47%_-0.93%]">
             <Image
               alt=""
@@ -47,7 +47,7 @@ export async function Hero() {
              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
-        <div className="-translate-x-1/2 absolute bottom-[40.82%] left-[calc(50%-645.5px)] top-[21.58%] w-[385px]">
+        <div className="-translate-x-1/2 absolute animate-float bottom-[40.82%] left-[calc(50%-645.5px)] top-[21.58%] w-[385px]">
           <div className="absolute inset-[0_0.47%_-0.47%_-0.93%]">
             <Image
               alt=""
@@ -57,7 +57,7 @@ export async function Hero() {
              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
-        <div className="-translate-x-1/2 absolute bottom-[36.33%] flex items-center justify-center left-[calc(50%-449.5px)] top-[46.58%] w-[175px]">
+        <div className="-translate-x-1/2 absolute animate-float bottom-[36.33%] flex items-center justify-center left-[calc(50%-449.5px)] top-[46.58%] w-[175px]">
           <div className="relative size-full">
             <div className="absolute inset-[0_0.47%_-0.47%_-0.93%]">
               <Image
@@ -69,7 +69,7 @@ export async function Hero() {
             </div>
           </div>
         </div>
-        <div className="-translate-x-1/2 absolute bottom-0 left-[calc(50%-531px)] top-[66.6%] w-[342px]">
+        <div className="-translate-x-1/2 absolute animate-float bottom-0 left-[calc(50%-531px)] top-[66.6%] w-[342px]">
           <div className="absolute inset-[-0.22%_0.56%_-0.28%_-1.05%]">
             <Image
               alt=""
@@ -79,7 +79,7 @@ export async function Hero() {
              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
-        <div className="-translate-x-1/2 absolute bottom-[42.29%] left-[calc(50%+696px)] top-[21.58%] w-[370px]">
+        <div className="-translate-x-1/2 absolute animate-float bottom-[42.29%] left-[calc(50%+696px)] top-[21.58%] w-[370px]">
           <div className="absolute inset-[-0.22%_0.56%_-0.28%_-1.05%]">
             <Image
               alt=""
@@ -89,7 +89,7 @@ export async function Hero() {
              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
-        <div className="-translate-x-1/2 absolute bottom-[36.33%] left-[calc(50%+480px)] top-[45.31%] w-[188px]">
+        <div className="-translate-x-1/2 absolute animate-float bottom-[36.33%] left-[calc(50%+480px)] top-[45.31%] w-[188px]">
           <div className="absolute inset-[-0.22%_0.56%_-0.28%_-1.05%]">
             <Image
               alt=""
@@ -146,7 +146,7 @@ export async function Hero() {
            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 
           {/* Floating Card: UI/UX Design (Left) */}
-          <div className="absolute left-[0%] sm:left-[-4.6%] top-[23.4%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col w-[max-content] hover:-translate-y-1 transition-transform origin-top-left scale-75 sm:scale-100">
+          <div className="absolute left-[0%] sm:left-[-4.6%] top-[23.4%] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col w-[max-content] hover:-translate-y-1 transition-transform origin-top-left scale-75 sm:scale-100">
             <p className="font-body font-medium text-brand-gray-950 text-[12px] md:text-[16px] leading-[1.2]">
               UI/UX Design
             </p>
@@ -165,7 +165,7 @@ export async function Hero() {
           />
 
           {/* Floating Card: Happy Students (Bottom Left) */}
-          <div className="absolute left-[0%] sm:left-[-17.8%] top-[60.0%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col gap-2 w-[max-content] hover:-translate-y-1 transition-transform origin-bottom-left scale-75 sm:scale-100">
+          <div className="absolute left-[0%] sm:left-[-17.8%] top-[60.0%] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col gap-2 w-[max-content] hover:-translate-y-1 transition-transform origin-bottom-left scale-75 sm:scale-100">
             <p className="font-body font-medium text-brand-gray-950 text-[14px] md:text-[16px] leading-[1.2]">
               Happy Students
             </p>

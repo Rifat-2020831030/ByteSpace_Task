@@ -15,7 +15,7 @@ export function LearningProgressCard({
 
   return (
     <div
-      className={`backdrop-blur-[10px] p-3 md:p-4 rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col gap-[8px] ${
+      className={`p-3 md:p-4 rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col gap-[8px] ${
         isSm ? "w-[140px] md:w-[200px]" : "w-[200px]"
       } ${className}`}
     >

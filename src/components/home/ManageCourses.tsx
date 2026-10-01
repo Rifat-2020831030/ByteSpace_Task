@@ -84,7 +84,7 @@ export function ManageCourses() {
           <TintedShape
             src={ASSETS.growth.student2}
             color="bg-brand-lime"
-            className="right-[-5%] md:right-[0px] top-[10%] md:top-[165px] w-[150px] md:w-[215px] aspect-square z-30"
+            className="right-[-5%] md:right-[0px] top-[10%] md:top-[165px] w-[150px] md:w-[215px] aspect-square z-30 animate-float"
           />
         </div>
 

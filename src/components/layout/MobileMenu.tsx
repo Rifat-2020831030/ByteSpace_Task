@@ -47,14 +47,14 @@ export function MobileMenu({ navLinks = [] }: { navLinks?: NavLink[] }) {
           ))}
           <hr className="border-gray-100" />
           <Link
-            href="#"
+            href="/login"
             className="font-body font-normal text-[16px] sm:hidden"
             onClick={() => setIsMenuOpen(false)}
           >
             Sign In
           </Link>
           <Link
-            href="#"
+            href="/register"
             className="font-body font-normal text-[16px] sm:hidden"
             onClick={() => setIsMenuOpen(false)}
           >

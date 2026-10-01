@@ -80,7 +80,7 @@ export async function ProfessionalGrowth() {
           <TintedShape
             src={ASSETS.growth.shape1}
             color="bg-brand-lime"
-            className="left-[30%] md:left-[79%] -top-8 md:top-[55px] w-[150px] md:w-[215px] aspect-square z-30 max-sm:hidden"
+            className="left-[30%] md:left-[79%] -top-8 md:top-[55px] w-[150px] md:w-[215px] aspect-square z-30 max-sm:hidden animate-float"
           />
         </div>
       </div>

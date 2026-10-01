@@ -34,13 +34,13 @@ export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
       {/* Auth & Cart/Menu Button */}
       <div className="flex items-center gap-[24px] text-brand-gray-50">
         <Link
-          href="#"
+          href="/login"
           className="font-body font-normal text-[16px] hidden sm:block hover:text-white transition-colors"
         >
           Sign In
         </Link>
         <Link
-          href="#"
+          href="/register"
           className="font-body font-normal text-[16px] hidden sm:block hover:text-white transition-colors"
         >
           Join Us
