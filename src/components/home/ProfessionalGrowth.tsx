@@ -12,7 +12,7 @@ export async function ProfessionalGrowth() {
   const featuredCourse = await getCourseOfTheDay();
 
   return (
-    <section className="relative w-full py-16 md:py-32 flex justify-center overflow-hidden">
+    <section className="relative w-full pt-16 md:pt-32 pb-8 md:pb-[36px] flex justify-center overflow-hidden">
       <div className="relative z-10 max-w-[1440px] w-full px-4 sm:px-6 lg:px-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-[63px]">
         {/* Left Side: Text and Stats */}
         <div className="flex flex-col gap-10 lg:w-[574px] shrink-0">
