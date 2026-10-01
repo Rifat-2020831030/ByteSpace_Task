@@ -74,7 +74,7 @@ export function AuthLayout({
           </Link>
 
           {/* Mobile Hamburger Menu Icon */}
-          <MobileMenu />
+          <MobileMenu hideOn="lg" />
         </div>
 
         {/* Left Side (Hidden on smaller screens, shown on lg) */}

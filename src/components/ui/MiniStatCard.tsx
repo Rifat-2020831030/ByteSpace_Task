@@ -1,5 +1,3 @@
-import React from "react";
-
 export type MiniStatCardProps = {
   title: string;
   subtitle: string;
@@ -43,7 +41,7 @@ export function MiniStatCard({
         </div>
       ) : (
         <>
-          <span className="font-heading font-semibold text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
+          <span className="font-heading font-semibold text-[16px] sm:text-[24px] text-brand-gray-50 leading-[32px] tracking-[-0.24px]">
             {amount}
           </span>
           <div className="bg-brand-lime-alt px-[8px] py-[2px] rounded-[24px] w-fit">
