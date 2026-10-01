@@ -1,6 +1,5 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
-import React from "react";
 import { AvatarGroup } from "./AvatarGroup";
 
 export type CourseType = {
@@ -48,11 +47,13 @@ export function CourseCard({
           alt={course.title}
           fill
           className={`object-cover ${
-            isFloating ? "" : "group-hover:scale-105 transition-transform duration-500"
+            isFloating
+              ? ""
+              : "group-hover:scale-105 transition-transform duration-500"
           }`}
         />
 
-        <div className="absolute inset-x-0 bottom-3 px-3 flex flex-wrap gap-[12px]">
+        <div className="absolute inset-x-0 bottom-3 px-3 flex flex-nowrap gap-[12px]">
           <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[12px] py-[6px] rounded-[24px] text-[10px] md:text-[12px] font-body font-medium text-brand-text-tertiary">
             {course.lessons} Lessons
           </div>
@@ -69,9 +70,15 @@ export function CourseCard({
         </div>
       </div>
 
-      <div className={`flex flex-col gap-[16px] ${isFloating ? "mt-4" : "flex-1 mt-2"}`}>
+      <div
+        className={`flex flex-col gap-[16px] ${
+          isFloating ? "mt-4" : "flex-1 mt-2"
+        }`}
+      >
         <div className="flex justify-between items-start">
-          <div className={`flex flex-col gap-[4px] ${isFloating ? "" : "pr-2"}`}>
+          <div
+            className={`flex flex-col gap-[4px] ${isFloating ? "" : "pr-2"}`}
+          >
             <h3
               className={`font-heading font-semibold text-[20px] text-black leading-[1.2] ${
                 isFloating ? "" : "tracking-[-0.2px] break-words"
