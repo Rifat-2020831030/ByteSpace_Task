@@ -1,6 +1,9 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
 import { Header } from "../layout/Header";
+import { LearningProgressCard } from "../ui/LearningProgressCard";
+import { Button } from "../ui/Button";
+import { AvatarGroup } from "../ui/AvatarGroup";
 
 export function Hero() {
   return (
@@ -122,9 +125,9 @@ export function Hero() {
                 className="w-full outline-none bg-transparent ml-2 font-body font-normal text-brand-gray-400 text-sm md:text-[18px]"
               />
             </div>
-            <button className="bg-brand-lime hover:bg-[#c4eb1a] transition-colors rounded-full h-[52px] px-8 flex items-center justify-center font-body font-medium text-brand-gray-950 text-[18px] w-full sm:w-auto shrink-0">
+            <Button size="lg" className="w-full sm:w-auto shrink-0">
               Search
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -152,17 +155,11 @@ export function Hero() {
           </div>
 
           {/* Floating Card: Learning Progress (Right) */}
-          <div className="absolute right-[0%] left-auto sm:right-auto sm:left-[71.1%] top-[25.6%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col gap-[8px] w-[140px] md:w-[200px] hover:-translate-y-1 transition-transform origin-bottom-right scale-75 sm:scale-100">
-            <p className="font-body font-medium text-brand-gray-950 text-[12px] md:text-[14px] leading-[1.2]">
-              Learning Progress
-            </p>
-            <p className="font-heading font-semibold text-brand-gray-950 text-[32px] md:text-[48px] leading-[1.2] tracking-[-0.48px]">
-              55%
-            </p>
-            <div className="w-full h-[8px] bg-[#f6f6f6] rounded-full overflow-hidden relative flex">
-              <div className="h-full w-[55%] bg-brand-lime rounded-full" />
-            </div>
-          </div>
+          <LearningProgressCard
+            progress={55}
+            size="sm"
+            className="absolute right-[0%] left-auto sm:right-auto sm:left-[71.1%] top-[25.6%] bg-white/95 hover:-translate-y-1 transition-transform origin-bottom-right scale-75 sm:scale-100"
+          />
 
           {/* Floating Card: Happy Students (Bottom Left) */}
           <div className="absolute left-[0%] sm:left-[-17.8%] top-[60.0%] backdrop-blur-[10px] bg-white/95 p-3 md:p-4 rounded-[16px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)] flex flex-col gap-2 w-[max-content] hover:-translate-y-1 transition-transform origin-bottom-left scale-75 sm:scale-100">
@@ -180,8 +177,8 @@ export function Hero() {
                 <Image src={ASSETS.icons.star} fill alt="star" />
               </div>
             </div>
-            <div className="flex items-center mt-1">
-              {[
+            <AvatarGroup
+              avatars={[
                 ASSETS.avatars.avatar1,
                 ASSETS.avatars.avatar2,
                 ASSETS.avatars.avatar3,
@@ -189,31 +186,13 @@ export function Hero() {
                 ASSETS.avatars.avatar5,
                 ASSETS.avatars.avatar6,
                 ASSETS.avatars.avatar7,
-              ].map((avatar, i) => (
-                <div
-                  key={i}
-                  className="relative w-[32px] h-[32px] md:w-[43px] md:h-[43px] -ml-[12px] md:-ml-[16px] first:ml-0 rounded-full border-[2px] border-white overflow-hidden shrink-0"
-                >
-                  <Image
-                    src={avatar}
-                    fill
-                    className="object-cover"
-                    alt="Student"
-                  />
-                </div>
-              ))}
-              <div className="relative w-[32px] h-[32px] md:w-[43px] md:h-[43px] -ml-[12px] md:-ml-[16px] rounded-full border-[2px] border-white shrink-0 flex items-center justify-center overflow-hidden">
-                <Image
-                  src={ASSETS.avatars.badgeBg}
-                  fill
-                  className="object-cover -z-10 absolute inset-0"
-                  alt=""
-                />
-                <span className="font-body font-bold text-brand-gray-950 text-[10px] md:text-[12px] relative z-10">
-                  2K+
-                </span>
-              </div>
-            </div>
+              ]}
+              countText="2K+"
+              badgeBg={ASSETS.avatars.badgeBg}
+              containerClassName="mt-1"
+              avatarClassName="w-[32px] h-[32px] md:w-[43px] md:h-[43px] -ml-[12px] md:-ml-[16px] first:ml-0 border-[2px] border-white"
+              badgeClassName="font-body font-bold text-brand-gray-950 text-[10px] md:text-[12px]"
+            />
           </div>
         </div>
       </div>

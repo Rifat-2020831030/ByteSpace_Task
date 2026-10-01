@@ -1,46 +1,7 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
-
-const MaskedShape = ({
-  src,
-  color,
-  className,
-  flip = false,
-}: {
-  src: string;
-  color: string;
-  className: string;
-  flip?: boolean;
-}) => (
-  <div
-    className={`-translate-x-1/2 absolute z-0 pointer-events-none ${className} ${
-      flip ? "-scale-x-100" : ""
-    }`}
-  >
-    {/* Base Grayscale Image for 3D Shading */}
-    <Image
-      src={src}
-      alt=""
-      fill
-      className="object-contain pointer-events-none opacity-80"
-    />
-
-    {/* Color Overlay using Hard-Light blend mode to tint the 3D shape while preserving shadows */}
-    <div
-      className={`absolute inset-0 ${color} mix-blend-hard-light pointer-events-none`}
-      style={{
-        WebkitMaskImage: `url(${src})`,
-        WebkitMaskSize: "contain",
-        WebkitMaskRepeat: "no-repeat",
-        WebkitMaskPosition: "center",
-        maskImage: `url(${src})`,
-        maskSize: "contain",
-        maskRepeat: "no-repeat",
-        maskPosition: "center",
-      }}
-    />
-  </div>
-);
+import { TintedShape } from "../ui/TintedShape";
+import { Button } from "../ui/Button";
 
 export function CreatorCTA() {
   return (
@@ -54,53 +15,53 @@ export function CreatorCTA() {
       <div className="absolute inset-0 z-0 pointer-events-none flex justify-center">
         <div className="relative w-full max-w-[1440px] h-full">
           {/* 1. Top Right Cone */}
-          <MaskedShape
+          <TintedShape
             src={ASSETS.cta.shape1}
             color="bg-brand-lime"
-            className="w-[188px] aspect-square left-1/2 ml-[454px] top-[0%]"
+            className="-translate-x-1/2 w-[188px] aspect-square left-1/2 ml-[454px] top-[0%]"
           />
 
           {/* 2. Bottom Right Shape */}
-          <MaskedShape
+          <TintedShape
             src={ASSETS.cta.shape2}
             color="bg-brand-lime"
-            className="w-[330px] aspect-square left-1/2 ml-[555px] top-[60%]"
+            className="-translate-x-1/2 w-[330px] aspect-square left-1/2 ml-[555px] top-[60%]"
           />
 
           {/* 3. Top Left Shape */}
-          <MaskedShape
+          <TintedShape
             src={ASSETS.cta.shape3}
             color="bg-brand-lime"
-            className="w-[385px] aspect-square left-1/2 -ml-[645px] top-[-33%]"
+            className="-translate-x-1/2 w-[385px] aspect-square left-1/2 -ml-[645px] top-[-33%]"
           />
 
           {/* 4. Top Center-Left Shape (flipped) */}
-          <MaskedShape
+          <TintedShape
             src={ASSETS.cta.shape3}
             color="bg-brand-gray-50"
-            className="w-[175px] aspect-square left-1/2 -ml-[454px] top-[1%]"
+            className="-translate-x-1/2 w-[175px] aspect-square left-1/2 -ml-[454px] top-[1%]"
             flip
           />
 
           {/* 5. Bottom Left Cone */}
-          <MaskedShape
+          <TintedShape
             src={ASSETS.cta.shape4}
             color="bg-brand-gray-50"
-            className="w-[188px] aspect-square left-1/2 -ml-[674px] top-[46%]"
+            className="-translate-x-1/2 w-[188px] aspect-square left-1/2 -ml-[674px] top-[46%]"
           />
 
           {/* 6. Bottom Center-Left Cone */}
-          <MaskedShape
+          <TintedShape
             src={ASSETS.cta.shape5}
             color="bg-brand-lime"
-            className="w-[342px] aspect-square left-1/2 -ml-[529px] top-[61%]"
+            className="-translate-x-1/2 w-[342px] aspect-square left-1/2 -ml-[529px] top-[61%]"
           />
 
           {/* 7. Far Right Center Cone */}
-          <MaskedShape
+          <TintedShape
             src={ASSETS.cta.shape6}
             color="bg-brand-gray-50"
-            className="w-[370px] aspect-square left-1/2 ml-[691px] top-[1%]"
+            className="-translate-x-1/2 w-[370px] aspect-square left-1/2 ml-[691px] top-[1%]"
           />
         </div>
       </div>
@@ -118,9 +79,9 @@ export function CreatorCTA() {
           course on the ByteSpace Course Library.
         </p>
 
-        <button className="bg-brand-lime hover:bg-brand-lime-hover transition-colors px-[24px] py-[12px] rounded-[24px] font-body font-medium text-[16px] md:text-[18px] text-brand-gray-950 leading-[1.2]">
+        <Button rounded="24px" className="px-[24px]">
           Join as Creator
-        </button>
+        </Button>
       </div>
     </section>
   );
