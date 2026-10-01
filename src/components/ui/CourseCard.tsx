@@ -50,7 +50,7 @@ export function CourseCard({
           className={`object-cover ${
             isFloating ? "" : "group-hover:scale-105 transition-transform duration-500"
           }`}
-        />
+         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
 
         <div className="absolute inset-x-0 bottom-[3.5cqw] px-[3.5cqw] flex flex-nowrap items-center gap-[3.5cqw]">
           <div className="bg-[rgba(246,246,246,0.6)] backdrop-blur-[4px] px-[3.5cqw] py-[1.75cqw] rounded-[7cqw] text-[3.5cqw] font-body font-medium text-brand-text-tertiary whitespace-nowrap shrink-0">

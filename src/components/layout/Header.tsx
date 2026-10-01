@@ -15,7 +15,7 @@ export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
         <div className="relative w-[28.8px] h-[31.5px]">
-          <Image src={ASSETS.icons.logo} alt="ByteSpace" fill />
+          <Image src={ASSETS.icons.logo} alt="ByteSpace" fill  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </div>
         <span className="font-logo font-bold text-brand-gray-50 text-[24px]">
           ByteSpace
@@ -54,7 +54,7 @@ export function Header({ navLinks = [] }: { navLinks?: NavLink[] }) {
 
         {/* Cart Icon (Previously misnamed as menu) */}
         <button aria-label="Cart" className="relative w-[24px] h-[24px]">
-          <Image src={ASSETS.icons.menu} alt="Cart" fill />
+          <Image src={ASSETS.icons.menu} alt="Cart" fill  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
         </button>
 
         {/* Mobile Hamburger Menu Icon (Inline SVG) */}

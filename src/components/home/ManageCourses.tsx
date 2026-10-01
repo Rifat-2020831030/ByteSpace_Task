@@ -18,7 +18,7 @@ export function ManageCourses() {
               alt="Student learning"
               fill
               className="object-contain object-bottom pointer-events-none"
-            />
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
 
           {/* Floating Card: Total Revenue (Left edge) */}
@@ -59,7 +59,7 @@ export function ManageCourses() {
                     alt="Star"
                     fill
                     className="object-contain"
-                  />
+                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@ export function ManageCourses() {
                     alt="Check"
                     fill
                     className="object-contain"
-                  />
+                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <span className="font-body font-medium text-[16px] md:text-[18px] text-brand-gray-950 leading-[1.2]">
                   {feature}
