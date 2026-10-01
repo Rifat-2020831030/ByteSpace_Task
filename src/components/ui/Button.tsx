@@ -15,7 +15,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-body font-medium transition-colors focus:outline-none";
+    "inline-flex items-center justify-center font-body font-medium transition-colors focus:outline-none cursor-pointer";
 
   const variants = {
     primary: "bg-brand-lime hover:bg-[#c4eb1a] text-brand-gray-950",

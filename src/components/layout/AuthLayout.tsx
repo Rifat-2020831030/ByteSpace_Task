@@ -83,12 +83,12 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
           {/* Graphics Container */}
           <div className="relative w-full h-[600px] mt-[65px] -ml-[25px]">
             {/* Card 1 */}
-            <div className="absolute left-[25px] top-[89px] z-20">
+            <div className="absolute left-[25px] top-[89px] z-10">
               <CourseCard course={course1} variant="floating" />
             </div>
 
             {/* Card 2 */}
-            <div className="absolute left-[138px] top-0 z-10">
+            <div className="absolute left-[136px] top-0 z-20">
               <CourseCard course={course2} variant="floating" />
             </div>
 
@@ -124,18 +124,18 @@ export function AuthLayout({ leftTitle, leftDescription, children }: AuthLayoutP
             <TintedShape
               src={ASSETS.shapes.shape1}
               color="bg-brand-gray-50"
-              className="w-[175px] h-[175px] left-[37.5%] top-[61.13%]"
+              className="w-[175px] h-[175px] left-[373px] top-[321px]"
               flip
             />
             <TintedShape
               src={ASSETS.shapes.cone1}
               color="bg-brand-lime"
-              className="w-[146px] h-[146px] left-[12.5%] top-[31.25%]"
+              className="w-[146px] h-[146px] left-[54px] top-[15px]"
             />
             <TintedShape
               src={ASSETS.shapes.cone2}
               color="bg-brand-lime"
-              className="w-[188px] h-[188px] left-[8.33%] top-[68.55%]"
+              className="w-[188px] h-[188px] left-[0px] top-[397px]"
             />
           </div>
         </div>

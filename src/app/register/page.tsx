@@ -20,7 +20,7 @@ export default function RegisterPage() {
           </h2>
         </div>
 
-        <form className="flex flex-col gap-[24px] w-full max-w-[453px]">
+        <form className="flex flex-col gap-[24px] w-full max-w-[453px] items-end">
           <Input 
             label="Full Name" 
             placeholder="Jamie Davis" 
@@ -37,7 +37,7 @@ export default function RegisterPage() {
             type="password" 
           />
           
-          <Button variant="primary" size="lg" rounded="24px" className="w-full mt-2" type="button">
+          <Button variant="primary" size="lg" rounded="24px" className="mt-2" type="button">
             Continue
           </Button>
         </form>
