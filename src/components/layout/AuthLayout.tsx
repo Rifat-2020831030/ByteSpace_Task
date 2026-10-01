@@ -1,3 +1,5 @@
+"use client";
+
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,6 +46,8 @@ export function AuthLayout({
     students: 26,
   };
 
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   return (
     <div className="bg-brand-blue relative min-h-screen w-full overflow-hidden flex justify-center">
       {/* Background Grid */}
@@ -59,8 +63,8 @@ export function AuthLayout({
 
       {/* Main Container */}
       <div className="relative z-10 w-full max-w-[1440px] min-h-screen lg:min-h-[1024px] mx-auto flex flex-col lg:grid lg:grid-cols-2 px-6 lg:px-[122px] py-[35px] lg:py-[120px]">
-        {/* Header Logo (Absolute on Desktop, relative on Mobile) */}
-        <div className="lg:absolute left-6 lg:left-[122px] top-[35px] z-50 mb-8 lg:mb-0">
+        {/* Header Logo & Mobile Menu */}
+        <div className="lg:absolute left-6 lg:left-[122px] right-6 lg:right-auto top-[35px] z-50 mb-8 lg:mb-0 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-[28.8px] h-[31.5px]">
               <Image src={ASSETS.icons.logo} alt="ByteSpace" fill />
@@ -69,7 +73,47 @@ export function AuthLayout({
               ByteSpace
             </span> */}
           </Link>
+
+          {/* Mobile Hamburger Menu Icon */}
+          <button
+            aria-label="Mobile Menu"
+            className="lg:hidden relative w-[28px] h-[28px] flex items-center justify-center text-white"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-[80px] right-6 w-[200px] bg-white rounded-[16px] p-4 shadow-xl flex flex-col gap-4 lg:hidden text-brand-gray-950 z-50 animate-in slide-in-from-top-2">
+            <Link href="/" className="font-body font-medium text-[16px]">
+              Home
+            </Link>
+            <Link href="/login" className="font-body font-normal text-[16px]">
+              Sign In
+            </Link>
+            <Link
+              href="/register"
+              className="font-body font-normal text-[16px]"
+            >
+              Create an Account
+            </Link>
+          </div>
+        )}
 
         {/* Left Side (Hidden on smaller screens, shown on lg) */}
         <div className="hidden lg:flex flex-col relative w-full h-full">
