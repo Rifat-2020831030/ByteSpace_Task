@@ -1,7 +1,7 @@
 import { ASSETS } from "@/lib/assets";
 import Image from "next/image";
-import { TintedShape } from "../ui/TintedShape";
 import { Button } from "../ui/Button";
+import { TintedShape } from "../ui/TintedShape";
 
 export function CreatorCTA() {
   return (
@@ -47,7 +47,7 @@ export function CreatorCTA() {
           <TintedShape
             src={ASSETS.cta.shape4}
             color="bg-brand-gray-50"
-            className="-translate-x-1/2 w-[188px] aspect-square left-1/2 -ml-[674px] top-[46%]"
+            className="-translate-x-1/2 w-[188px] aspect-square left-[46.5%] -ml-[674px] top-[46%]"
           />
 
           {/* 6. Bottom Center-Left Cone */}
