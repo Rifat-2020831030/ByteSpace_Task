@@ -28,7 +28,7 @@ export function ManageCourses() {
             amount="$120.29"
             increase="+12$"
             progress={55}
-            className="absolute left-0 top-[20px] md:top-[44px] z-30 w-[200px] md:w-fit"
+            className="absolute left-0 top-[7.4%] z-30 w-[150px] md:w-[200px]"
           />
 
           {/* Floating Card: Year to Date (Left edge) */}
@@ -37,29 +37,30 @@ export function ManageCourses() {
             subtitle="2023"
             amount="$1,200.38"
             increase="+12$"
-            className="absolute left-0 top-[150px] md:top-[194px] z-30 w-[134px]"
+            className="absolute left-0 top-[32.6%] z-30 w-[120px] md:w-[134px]"
           />
 
           {/* Floating Card: Happy Students (Bottom right) */}
-          <div className="absolute right-0 md:left-[283px] bottom-0 md:top-[413px] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[258px]">
-            <span className="font-body font-medium text-[16px] text-brand-gray-950 leading-[24px]">
-              Happy Students
-            </span>
-
-            <div className="flex items-center gap-[4px] -mt-1 mb-1">
-              <span className="font-body font-bold text-brand-gray-950 text-[10px] leading-[1.5]">
-                4.5
+          <div className="absolute left-[30%] md:left-[52.3%] top-[69.3%] bg-white backdrop-blur-[10px] p-[16px] rounded-[16px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-center gap-[8px] z-30 w-[200px] md:w-[258px]">
+            <div className="flex flex-col">
+              <span className="font-body font-medium text-[16px] text-brand-gray-950 leading-[24px]">
+                Happy Students
               </span>
-              <span className="font-body font-normal text-brand-gray-400 text-[10px] leading-[1.5]">
-                (240)
-              </span>
-              <div className="relative w-[16px] h-[16px]">
-                <Image
-                  src={ASSETS.icons.star}
-                  alt="Star"
-                  fill
-                  className="object-contain"
-                />
+              <div className="flex items-center">
+                <span className="font-body font-bold text-brand-gray-950 text-[10px] leading-[1.5]">
+                  4.5&nbsp;
+                </span>
+                <span className="font-body font-normal text-brand-gray-400 text-[10px] leading-[1.5]">
+                  (240)
+                </span>
+                <div className="relative w-[16px] h-[16px] ml-1">
+                  <Image
+                    src={ASSETS.icons.star}
+                    alt="Star"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
 
@@ -73,8 +74,8 @@ export function ManageCourses() {
                 ASSETS.avatars.avatar6,
               ]}
               countText="2K+"
-              avatarClassName="w-[43px] h-[43px] border-[1.5px] border-white -mr-[16px] z-[1]"
-              badgeClassName="bg-brand-lime z-10 font-body font-bold text-[12px] text-brand-gray-950"
+              avatarClassName="w-[32px] h-[32px] md:w-[43px] md:h-[43px] border-[1.5px] border-white -mr-[16px] z-[1]"
+              badgeClassName="bg-brand-lime z-10 font-body font-bold text-[10px] md:text-[12px] text-brand-gray-950"
             />
           </div>
 
