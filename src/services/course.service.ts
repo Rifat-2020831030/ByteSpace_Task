@@ -97,6 +97,21 @@ export async function getFeaturedCourses(): Promise<Course[]> {
   ];
 }
 
+export async function getCourseOfTheDay(): Promise<Course> {
+  return {
+    id: "1",
+    title: "Learn Figma from Basic",
+    author: "purepearl studio",
+    level: "Beginner",
+    price: "$25",
+    image: ASSETS.courses.course1,
+    lessons: 17,
+    duration: "2 hours 16 mins",
+    comments: 59,
+    rating: 4.5,
+    students: 26,
+  };
+}
 export async function getCourseFilters(): Promise<string[]> {
   return [
     "Finance",
