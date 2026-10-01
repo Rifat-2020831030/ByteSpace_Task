@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Header } from "../layout/Header";
 import { LearningProgressCard } from "../ui/LearningProgressCard";
 import { Button } from "../ui/Button";
+import { Input } from "../ui/Input";
 import { AvatarGroup } from "../ui/AvatarGroup";
 import { PlatformService } from "@/services/platform.service";
 
@@ -118,14 +119,16 @@ export async function Hero() {
           </p>
 
           <div className="mt-8 md:mt-[60px] flex flex-col sm:flex-row gap-4 items-start w-full max-w-[620px]">
-            <div className="flex-1 bg-white rounded-full flex items-center px-6 py-[12px] w-full h-[52px]">
-              <div className="w-[24px] h-[24px] relative shrink-0">
-                <Image src={ASSETS.icons.search} alt="Search" fill  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-              </div>
-              <input
+            <div className="flex-1 w-full">
+              <Input
                 type="text"
                 placeholder="Course, topic, creator"
-                className="w-full outline-none bg-transparent ml-2 font-body font-normal text-brand-gray-400 text-sm md:text-[18px]"
+                leftIcon={
+                  <div className="w-[24px] h-[24px] relative shrink-0">
+                    <Image src={ASSETS.icons.search} alt="Search" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                  </div>
+                }
+                className="w-full"
               />
             </div>
             <Button size="lg" className="w-full sm:w-auto shrink-0">
