@@ -58,9 +58,9 @@ export function AuthLayout({
       </div>
 
       {/* Main Container */}
-      <div className="relative z-10 w-full max-w-[1440px] min-h-[1024px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 lg:px-[122px] pt-[35px] pb-[48px] lg:py-[120px]">
+      <div className="relative z-10 w-full max-w-[1440px] min-h-screen lg:min-h-[1024px] mx-auto flex flex-col lg:grid lg:grid-cols-2 px-6 lg:px-[122px] py-[35px] lg:py-[120px]">
         {/* Header Logo (Absolute on Desktop, relative on Mobile) */}
-        <div className="lg:absolute left-6 lg:left-[122px] top-[35px] z-50">
+        <div className="lg:absolute left-6 lg:left-[122px] top-[35px] z-50 mb-8 lg:mb-0">
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-[28.8px] h-[31.5px]">
               <Image src={ASSETS.icons.logo} alt="ByteSpace" fill />
@@ -153,7 +153,7 @@ export function AuthLayout({
         </div>
 
         {/* Right Side (Form Container) */}
-        <div className="flex items-center justify-center lg:justify-end w-full">
+        <div className="flex flex-1 items-center justify-center lg:justify-end w-full mt-8 lg:mt-0">
           <div className="bg-white rounded-[24px] w-full max-w-[579px] p-8 lg:p-[63px] min-h-[683px] flex flex-col justify-between shadow-2xl relative z-20">
             {children}
           </div>
